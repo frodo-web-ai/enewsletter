@@ -3,53 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enphase Daily Intelligence Brief — May 14, 2026</title>
+<title>Enphase Daily Intelligence Brief — May 15, 2026</title>
 <style>
-  /* Enphase Design System — Modern Refresh */
   :root {
-    --enphase-orange: #F36F21;
-    --enphase-orange-dark: #D85A0F;
-    --enphase-orange-light: #FFB07A;
-    --enphase-navy: #0A2540;
-    --enphase-navy-light: #1A3A5C;
-    --enphase-gray-50: #F7F9FC;
-    --enphase-gray-100: #EEF2F7;
-    --enphase-gray-200: #DDE3EC;
-    --enphase-gray-400: #8A95A5;
-    --enphase-gray-600: #4A5568;
-    --enphase-gray-900: #1A202C;
-    --positive: #10A957;
-    --positive-bg: #E8F8F0;
-    --negative: #DC3545;
-    --negative-bg: #FDEDEE;
-    --neutral: #6B7280;
-    --neutral-bg: #F0F2F5;
-    --competitor: #6D28D9;
-    --competitor-bg: #F5F0FF;
-    --warning: #F59E0B;
-    --warning-bg: #FFF7E6;
-    --shadow-sm: 0 1px 3px rgba(10, 37, 64, 0.06), 0 1px 2px rgba(10, 37, 64, 0.04);
-    --shadow-md: 0 4px 12px rgba(10, 37, 64, 0.08), 0 2px 4px rgba(10, 37, 64, 0.04);
-    --shadow-lg: 0 12px 32px rgba(10, 37, 64, 0.12), 0 4px 8px rgba(10, 37, 64, 0.06);
+    --enphase-orange: #F26B21;
+    --enphase-orange-dark: #D9531A;
+    --enphase-orange-light: #FF8C42;
+    --enphase-navy: #1A1A2E;
+    --enphase-slate: #2C2C44;
+    --enphase-gray-50: #F8F9FB;
+    --enphase-gray-100: #F1F3F7;
+    --enphase-gray-200: #E5E8EE;
+    --enphase-gray-300: #CBD0DA;
+    --enphase-gray-500: #6F7689;
+    --enphase-gray-700: #3A3F50;
+    --green: #1A8A42;
+    --green-bg: #E6F9ED;
+    --red: #C0392B;
+    --red-bg: #FFEAEA;
+    --amber: #E67E22;
+    --amber-bg: #FFF4E0;
+    --blue: #2C5DD6;
+    --blue-bg: #E8EFFF;
+    --purple: #7B2FD4;
+    --purple-bg: #F4ECFF;
+    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 4px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
+    --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(15, 23, 42, 0.06);
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 16px;
     --radius-xl: 20px;
-    --font-sans: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
   }
 
   * { box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
-
   body {
-    font-family: var(--font-sans);
-    background: linear-gradient(135deg, #F0F4F9 0%, #E8EFF7 100%);
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #EEF1F6 0%, #F8F9FB 100%);
     margin: 0;
     padding: 24px 16px;
     color: var(--enphase-navy);
-    font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -64,642 +59,538 @@
 
   /* HEADER */
   .header {
-    background: linear-gradient(120deg, var(--enphase-navy) 0%, var(--enphase-navy-light) 60%, var(--enphase-orange-dark) 130%);
-    padding: 40px 48px;
+    background: linear-gradient(135deg, #1A1A2E 0%, #2C2C44 50%, #F26B21 130%);
+    padding: 36px 48px 40px;
     color: #fff;
     position: relative;
     overflow: hidden;
   }
   .header::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: -120px;
-    right: -120px;
-    width: 380px;
-    height: 380px;
-    background: radial-gradient(circle, rgba(243, 111, 33, 0.35) 0%, transparent 70%);
+    top: -60px;
+    right: -60px;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(242, 107, 33, 0.35) 0%, transparent 70%);
     border-radius: 50%;
   }
-  .header-inner {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .brand-logo {
-    width: 48px;
-    height: 48px;
-    background: var(--enphase-orange);
+  .header-content { position: relative; z-index: 1; }
+  .header-top { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+  .logo-mark {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--enphase-orange), var(--enphase-orange-light));
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: 800;
-    box-shadow: 0 6px 16px rgba(243, 111, 33, 0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 900;
+    box-shadow: 0 4px 14px rgba(242, 107, 33, 0.4);
   }
   .header h1 {
     margin: 0;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 800;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.6px;
   }
-  .header .subtitle {
-    margin: 2px 0 0;
-    font-size: 13px;
-    opacity: 0.85;
-    font-weight: 400;
-  }
-  .header-meta {
-    text-align: right;
-    font-size: 12px;
-    opacity: 0.85;
-  }
-  .header-meta .date {
-    font-size: 14px;
+  .header p { margin: 4px 0 0; opacity: 0.85; font-size: 14px; letter-spacing: 0.2px; }
+  .header-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+  .header-badge {
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
     font-weight: 600;
-    margin-bottom: 4px;
-    color: #fff;
-    opacity: 1;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
   }
 
-  /* STAT BAR */
+  /* STATS BAR */
   .stat-bar {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    background: #fff;
-    border-bottom: 1px solid var(--enphase-gray-100);
-    padding: 24px 48px;
-    gap: 12px;
+    background: #FFF8F0;
+    border-bottom: 3px solid var(--enphase-orange);
+    padding: 18px 32px;
+    gap: 6px;
   }
-  .stat {
-    text-align: center;
-    padding: 8px;
-    border-right: 1px solid var(--enphase-gray-100);
-  }
-  .stat:last-child { border-right: none; }
+  .stat { text-align: center; padding: 4px; }
   .stat .num {
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--enphase-orange);
+    font-size: 30px; font-weight: 800;
+    background: linear-gradient(135deg, var(--enphase-orange), var(--enphase-orange-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     line-height: 1;
-    letter-spacing: -0.5px;
   }
   .stat .label {
-    font-size: 10.5px;
-    color: var(--enphase-gray-400);
+    font-size: 10px;
+    color: var(--enphase-gray-500);
     text-transform: uppercase;
-    letter-spacing: 0.8px;
-    margin-top: 8px;
+    letter-spacing: 0.6px;
+    margin-top: 6px;
     font-weight: 600;
   }
 
   /* REGION TABS */
-  .tabs-wrapper {
-    background: var(--enphase-gray-50);
-    border-bottom: 1px solid var(--enphase-gray-100);
-    padding: 0 48px;
-  }
-  .tabs {
+  .region-tabs {
+    background: var(--enphase-navy);
+    padding: 0 32px;
     display: flex;
     gap: 4px;
-    padding-top: 16px;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--enphase-slate);
   }
-  .tab {
+  .region-tab {
     background: transparent;
     border: none;
-    padding: 12px 24px;
+    color: rgba(255, 255, 255, 0.65);
+    padding: 18px 22px;
     font-size: 13px;
     font-weight: 700;
-    color: var(--enphase-gray-600);
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
     cursor: pointer;
-    border-radius: 10px 10px 0 0;
-    transition: all 0.2s ease;
-    font-family: inherit;
-    display: flex;
-    align-items: center;
-    gap: 8px;
     border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+    position: relative;
+    white-space: nowrap;
+    font-family: inherit;
   }
-  .tab:hover {
-    background: rgba(243, 111, 33, 0.08);
-    color: var(--enphase-orange);
-  }
-  .tab.active {
-    background: #fff;
-    color: var(--enphase-orange);
+  .region-tab:hover { color: #fff; background: rgba(255, 255, 255, 0.04); }
+  .region-tab.active {
+    color: #fff;
     border-bottom-color: var(--enphase-orange);
-    box-shadow: 0 -2px 8px rgba(10, 37, 64, 0.04);
   }
-  .tab .flag {
-    font-size: 14px;
+  .region-tab .tab-flag {
+    margin-right: 8px;
+    font-size: 16px;
   }
-  .tab .count {
-    background: var(--enphase-gray-100);
-    color: var(--enphase-gray-600);
-    padding: 2px 7px;
+  .region-tab .tab-count {
+    background: var(--enphase-orange);
+    color: #fff;
+    padding: 2px 8px;
     border-radius: 10px;
     font-size: 10px;
+    margin-left: 8px;
+    font-weight: 700;
   }
-  .tab.active .count {
-    background: rgba(243, 111, 33, 0.15);
-    color: var(--enphase-orange);
-  }
+  .region-panel { display: none; }
+  .region-panel.active { display: block; }
 
-  .tab-content {
-    display: none;
-    animation: fadeIn 0.3s ease;
-  }
-  .tab-content.active { display: block; }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* SECTION */
+  /* SECTIONS */
   .section {
     padding: 32px 48px;
     border-bottom: 1px solid var(--enphase-gray-100);
   }
-  .section:last-child { border-bottom: none; }
   .section h2 {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 800;
-    margin: 0 0 6px;
+    margin: 0 0 20px;
     display: flex;
     align-items: center;
     gap: 10px;
     color: var(--enphase-navy);
     letter-spacing: -0.3px;
   }
-  .section h2 .icon {
-    font-size: 22px;
-  }
-  .section-subtitle {
-    font-size: 13px;
-    color: var(--enphase-gray-400);
-    margin: 0 0 24px;
-  }
   .section-label {
     display: inline-block;
-    background: var(--enphase-orange);
+    background: linear-gradient(135deg, var(--enphase-orange), var(--enphase-orange-dark));
     color: #fff;
     font-size: 10px;
     font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 4px;
+    padding: 3px 9px;
+    border-radius: 6px;
     text-transform: uppercase;
     letter-spacing: 0.6px;
-    margin-left: 6px;
-    vertical-align: 2px;
   }
-  .section-label.strategic { background: var(--competitor); }
-  .section-label.context { background: var(--enphase-gray-600); }
-
-  /* CARD */
-  .card {
-    background: #fff;
-    border: 1px solid var(--enphase-gray-100);
-    border-left: 4px solid var(--enphase-orange);
-    border-radius: var(--radius-md);
-    padding: 16px 20px;
-    margin-bottom: 12px;
-    transition: all 0.2s ease;
-    box-shadow: var(--shadow-sm);
-  }
-  .card:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--enphase-gray-200);
-  }
-  .card.positive { border-left-color: var(--positive); background: linear-gradient(90deg, var(--positive-bg) 0%, #fff 18%); }
-  .card.negative { border-left-color: var(--negative); background: linear-gradient(90deg, var(--negative-bg) 0%, #fff 18%); }
-  .card.neutral { border-left-color: var(--neutral); }
-  .card.competitor { border-left-color: var(--competitor); background: linear-gradient(90deg, var(--competitor-bg) 0%, #fff 18%); }
-  .card.investor { border-left-color: #2563EB; background: linear-gradient(90deg, #EFF6FF 0%, #fff 18%); }
-  .card .source {
-    font-size: 10.5px;
-    color: var(--enphase-gray-400);
-    text-transform: uppercase;
-    letter-spacing: 0.7px;
-    margin-bottom: 6px;
-    font-weight: 600;
-  }
-  .card .title {
-    font-size: 14.5px;
-    font-weight: 700;
-    color: var(--enphase-navy);
-    line-height: 1.45;
-    margin-bottom: 0;
-  }
-  .card .title a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px dotted transparent;
-  }
-  .card .title a:hover {
-    color: var(--enphase-orange);
-    border-bottom-color: var(--enphase-orange);
-  }
-  .card .excerpt {
+  .section-intro {
     font-size: 13px;
-    color: var(--enphase-gray-600);
-    margin-top: 8px;
-    line-height: 1.65;
+    color: var(--enphase-gray-500);
+    margin: -12px 0 18px;
   }
-  .badge {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 10.5px;
-    font-weight: 700;
-    margin-left: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-  }
-  .badge.positive { background: var(--positive-bg); color: var(--positive); }
-  .badge.negative { background: var(--negative-bg); color: var(--negative); }
-  .badge.neutral { background: var(--neutral-bg); color: var(--neutral); }
 
   /* PRIORITY ACTION BOARD */
   .action-board {
-    padding: 32px 48px;
-    background: linear-gradient(135deg, #FFF8F2 0%, #FFFCFA 100%);
-    border-bottom: 1px solid var(--enphase-gray-100);
+    padding: 36px 48px;
+    background: linear-gradient(180deg, #FFF8F0 0%, #FAFAFB 100%);
+    border-bottom: 3px solid var(--enphase-orange);
   }
-  .action-board h2 {
-    font-size: 19px;
-    font-weight: 800;
-    margin: 0 0 4px;
-    color: var(--enphase-navy);
-  }
-  .action-board .subtitle {
-    font-size: 13px;
-    color: var(--enphase-gray-400);
-    margin-bottom: 22px;
-  }
+  .action-board h2 { font-size: 22px; margin: 0 0 6px; color: var(--enphase-navy); }
+  .action-board .subtitle { font-size: 13px; color: var(--enphase-gray-500); margin-bottom: 22px; }
   .action-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-  }
-  .action-col {
-    background: #fff;
-    border-radius: var(--radius-md);
-    padding: 18px;
-    border: 1px solid var(--enphase-gray-100);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
   }
   .action-col h3 {
     font-size: 12px;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.7px;
-    padding: 8px 14px;
+    letter-spacing: 0.8px;
+    padding: 9px 14px;
     border-radius: 8px;
-    margin: 0 0 14px;
-    display: inline-block;
+    margin: 0 0 12px;
+    display: flex; align-items: center; gap: 6px;
   }
-  .action-col.urgent h3 { background: var(--negative-bg); color: var(--negative); }
-  .action-col.week h3 { background: var(--warning-bg); color: var(--warning); }
-  .action-col.ongoing h3 { background: var(--positive-bg); color: var(--positive); }
+  .action-col.urgent h3 { background: var(--red-bg); color: var(--red); }
+  .action-col.week h3 { background: var(--amber-bg); color: var(--amber); }
+  .action-col.ongoing h3 { background: var(--green-bg); color: var(--green); }
   .action-card {
-    border-radius: var(--radius-sm);
-    padding: 14px 16px;
+    background: #fff;
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
     margin-bottom: 12px;
-    border-left: 3px solid var(--enphase-gray-200);
-    background: var(--enphase-gray-50);
+    border-left: 4px solid var(--enphase-gray-300);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
   }
-  .action-card.urgent { border-left-color: var(--negative); background: #FFF5F5; }
-  .action-card.week { border-left-color: var(--warning); background: #FFFBF0; }
-  .action-card.ongoing { border-left-color: var(--positive); background: #F4FBF6; }
+  .action-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .action-card.urgent { border-left-color: var(--red); }
+  .action-card.week { border-left-color: var(--amber); }
+  .action-card.ongoing { border-left-color: var(--green); }
   .action-card .act-title {
-    font-size: 13.5px;
-    font-weight: 800;
-    color: var(--enphase-navy);
-    margin-bottom: 6px;
-    line-height: 1.35;
+    font-size: 14px; font-weight: 700;
+    color: var(--enphase-navy); margin-bottom: 6px;
+    letter-spacing: -0.1px;
   }
   .action-card .act-why {
-    font-size: 12.5px;
-    color: var(--enphase-gray-600);
-    line-height: 1.55;
-    margin-bottom: 8px;
+    font-size: 12.5px; color: var(--enphase-gray-700);
+    line-height: 1.55; margin-bottom: 10px;
   }
-  .act-meta {
-    font-size: 10.5px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
+  .act-meta { display: flex; flex-wrap: wrap; gap: 5px; }
   .act-meta span {
     display: inline-block;
-    background: #fff;
-    border: 1px solid var(--enphase-gray-200);
-    border-radius: 4px;
-    padding: 2px 7px;
-    color: var(--enphase-gray-600);
+    background: var(--enphase-gray-100);
+    color: var(--enphase-gray-700);
+    border-radius: 5px;
+    padding: 3px 8px;
+    font-size: 10.5px;
     font-weight: 600;
   }
+  .act-meta span.fmt { background: var(--blue-bg); color: var(--blue); }
+  .act-meta span.plat { background: var(--purple-bg); color: var(--purple); }
+  .act-meta span.own { background: var(--enphase-gray-100); color: var(--enphase-gray-700); }
 
-  /* SENTIMENT SUMMARY */
+  /* CARDS */
+  .card {
+    background: var(--enphase-gray-50);
+    border-left: 4px solid var(--enphase-orange);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover { transform: translateX(2px); box-shadow: var(--shadow-sm); }
+  .card.positive { border-left-color: var(--green); background: var(--green-bg); }
+  .card.negative { border-left-color: var(--red); background: var(--red-bg); }
+  .card.neutral { border-left-color: var(--enphase-gray-300); background: var(--enphase-gray-50); }
+  .card.competitor { border-left-color: var(--purple); background: var(--purple-bg); }
+  .card.policy { border-left-color: var(--blue); background: var(--blue-bg); }
+  .card .source {
+    font-size: 11px; color: var(--enphase-gray-500);
+    text-transform: uppercase; letter-spacing: 0.6px;
+    margin-bottom: 5px; font-weight: 600;
+  }
+  .card .title {
+    font-size: 14.5px; font-weight: 700;
+    color: var(--enphase-navy);
+    letter-spacing: -0.1px;
+  }
+  .card .title a { color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(0,0,0,0.2); }
+  .card .title a:hover { color: var(--enphase-orange); border-bottom-color: var(--enphase-orange); }
+  .card .excerpt {
+    font-size: 13px; color: var(--enphase-gray-700);
+    margin-top: 8px; line-height: 1.6;
+  }
+  .card .link-row {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .card .link-row a {
+    color: var(--enphase-orange);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .card .link-row a:hover { text-decoration: underline; }
+
+  /* BADGES */
+  .badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 10.5px;
+    font-weight: 700;
+    margin-left: 6px;
+    letter-spacing: 0.3px;
+  }
+  .badge.positive { background: var(--green-bg); color: var(--green); }
+  .badge.negative { background: var(--red-bg); color: var(--red); }
+  .badge.neutral { background: var(--enphase-gray-100); color: var(--enphase-gray-500); }
+
+  /* SENTIMENT BOXES */
   .sentiment-summary {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
     margin-bottom: 22px;
   }
   .sent-box {
     padding: 18px;
     border-radius: var(--radius-md);
     text-align: center;
-    border: 1px solid var(--enphase-gray-100);
+    box-shadow: var(--shadow-sm);
   }
-  .sent-box.pos { background: var(--positive-bg); border-color: rgba(16, 169, 87, 0.2); }
-  .sent-box.neg { background: var(--negative-bg); border-color: rgba(220, 53, 69, 0.2); }
-  .sent-box.neu { background: var(--neutral-bg); border-color: var(--enphase-gray-200); }
-  .sent-box .count {
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 1;
-  }
-  .sent-box.pos .count { color: var(--positive); }
-  .sent-box.neg .count { color: var(--negative); }
-  .sent-box.neu .count { color: var(--neutral); }
-  .sent-box .lbl {
-    font-size: 12px;
-    color: var(--enphase-gray-600);
-    margin-top: 8px;
-    font-weight: 600;
-  }
+  .sent-box.pos { background: linear-gradient(135deg, var(--green-bg) 0%, #D6F5E0 100%); }
+  .sent-box.neg { background: linear-gradient(135deg, var(--red-bg) 0%, #FFD6D6 100%); }
+  .sent-box.neu { background: linear-gradient(135deg, var(--enphase-gray-100) 0%, #E8ECF3 100%); }
+  .sent-box .count { font-size: 34px; font-weight: 800; line-height: 1; }
+  .sent-box.pos .count { color: var(--green); }
+  .sent-box.neg .count { color: var(--red); }
+  .sent-box.neu .count { color: var(--enphase-gray-500); }
+  .sent-box .lbl { font-size: 12px; color: var(--enphase-gray-700); margin-top: 6px; font-weight: 600; }
 
-  /* COMP TABLE */
+  /* COMPETITOR TABLE */
   .comp-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     font-size: 13px;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
-    border: 1px solid var(--enphase-gray-100);
   }
   .comp-table th {
     background: var(--enphase-navy);
-    color: #fff;
+    color: rgba(255,255,255,0.95);
     padding: 12px 14px;
     text-align: left;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.7px;
     font-weight: 700;
   }
   .comp-table td {
-    padding: 13px 14px;
+    padding: 14px;
     border-bottom: 1px solid var(--enphase-gray-100);
     vertical-align: top;
     line-height: 1.55;
+    background: #fff;
   }
   .comp-table tr:last-child td { border-bottom: none; }
   .comp-table tr:hover td { background: var(--enphase-gray-50); }
-  .threat-high { color: var(--negative); font-weight: 700; }
-  .threat-med { color: var(--warning); font-weight: 700; }
-  .threat-low { color: var(--positive); font-weight: 700; }
+  .comp-table td strong { color: var(--enphase-navy); }
+  .threat-high { color: var(--red); font-weight: 700; }
+  .threat-med { color: var(--amber); font-weight: 700; }
+  .threat-low { color: var(--green); font-weight: 700; }
 
-  /* GAP ITEM */
+  /* GAP ANALYSIS */
   .gap-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
   }
   .gap-item {
-    background: linear-gradient(135deg, #FFF8F2 0%, #FFFCFA 100%);
-    border: 1px solid #FFE0C7;
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFFBF5 100%);
+    border: 1px solid #FFE0C0;
     border-radius: var(--radius-md);
     padding: 16px 18px;
+    transition: transform 0.15s ease;
   }
+  .gap-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
   .gap-item .gap-type {
-    font-size: 10.5px;
-    font-weight: 800;
-    color: var(--enphase-orange);
-    text-transform: uppercase;
-    margin-bottom: 6px;
-    letter-spacing: 0.6px;
-  }
-  .gap-item .gap-desc {
-    font-size: 13px;
-    color: var(--enphase-gray-600);
-    line-height: 1.6;
+    font-size: 11px; font-weight: 700;
+    color: var(--enphase-orange); text-transform: uppercase;
+    margin-bottom: 6px; letter-spacing: 0.5px;
   }
   .gap-item .gap-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--enphase-navy);
-    margin-bottom: 4px;
+    font-size: 14px; font-weight: 700;
+    color: var(--enphase-navy); margin-bottom: 6px;
+  }
+  .gap-item .gap-desc {
+    font-size: 12.5px; color: var(--enphase-gray-700);
+    line-height: 1.55;
   }
 
   /* TAKEAWAYS */
-  .takeaway-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+  .takeaway-list { list-style: none; padding: 0; margin: 0; }
   .takeaway-list li {
-    padding: 14px 16px 14px 44px;
-    border-radius: var(--radius-sm);
-    margin-bottom: 8px;
+    padding: 12px 0 12px 36px;
+    border-bottom: 1px solid var(--enphase-gray-100);
     font-size: 14px;
-    color: var(--enphase-gray-900);
+    color: var(--enphase-gray-700);
     line-height: 1.6;
     position: relative;
-    background: var(--enphase-gray-50);
-    border-left: 3px solid var(--enphase-orange);
   }
+  .takeaway-list li:last-child { border-bottom: none; }
   .takeaway-list li::before {
     content: "→";
     position: absolute;
-    left: 18px;
+    left: 4px;
     color: var(--enphase-orange);
-    font-weight: 700;
+    font-weight: 800;
     font-size: 16px;
-    top: 13px;
   }
-  .takeaway-list li.urgent {
-    background: var(--negative-bg);
-    border-left-color: var(--negative);
-  }
-  .takeaway-list li.urgent::before {
-    content: "🚨";
-    left: 12px;
-    top: 12px;
-  }
+  .takeaway-list li.urgent::before { content: "🚨"; left: 0; top: 10px; }
+  .takeaway-list li strong { color: var(--enphase-navy); }
 
-  /* NO DATA */
+  /* MISC */
   .no-data {
-    color: var(--enphase-gray-400);
+    color: var(--enphase-gray-500);
     font-style: italic;
     font-size: 13px;
-    padding: 14px 0;
-    text-align: center;
+    padding: 14px 16px;
     background: var(--enphase-gray-50);
     border-radius: var(--radius-sm);
   }
-
-  /* FOOTER */
   .footer {
     padding: 28px 48px;
     text-align: center;
     background: var(--enphase-navy);
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255,255,255,0.6);
     font-size: 12px;
     line-height: 1.7;
   }
-  .footer strong { color: #fff; }
-
-  /* LINKS */
-  a {
-    color: var(--enphase-orange);
-    text-decoration: none;
-  }
+  .footer strong { color: var(--enphase-orange); }
+  a { color: var(--enphase-orange); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
+  .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .pill {
+    background: rgba(242, 107, 33, 0.1);
+    color: var(--enphase-orange);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
   /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .stat-bar { grid-template-columns: repeat(3, 1fr); }
-    .stat:nth-child(3) { border-right: none; }
-    .action-columns { grid-template-columns: 1fr; }
+  @media (max-width: 880px) {
+    body { padding: 12px 8px; }
+    .header { padding: 24px 22px 28px; }
+    .header h1 { font-size: 22px; }
+    .stat-bar { grid-template-columns: repeat(3, 1fr); padding: 16px; gap: 12px; }
+    .section, .action-board { padding: 24px 22px; }
+    .footer { padding: 22px; }
+    .action-columns, .gap-grid { grid-template-columns: 1fr; }
     .sentiment-summary { grid-template-columns: 1fr; }
-    .gap-grid { grid-template-columns: 1fr; }
-    .header, .section, .action-board, .footer, .stat-bar, .tabs-wrapper { padding-left: 24px; padding-right: 24px; }
-    .tabs { overflow-x: auto; }
+    .region-tabs { padding: 0 16px; }
+    .region-tab { padding: 14px 14px; font-size: 12px; }
   }
 </style>
 </head>
 <body>
-
 <div class="container">
 
   <!-- HEADER -->
   <div class="header">
-    <div class="header-inner">
-      <div class="brand">
-        <div class="brand-logo">⚡</div>
+    <div class="header-content">
+      <div class="header-top">
+        <div class="logo-mark">⚡</div>
         <div>
           <h1>Enphase Daily Intelligence Brief</h1>
-          <p class="subtitle">Global market, competitor, and community signal scan</p>
+          <p>Friday, May 15, 2026 &nbsp;·&nbsp; Global Marketing &amp; Competitive Intelligence</p>
         </div>
       </div>
-      <div class="header-meta">
-        <div class="date">Thursday, May 14, 2026</div>
-        <div>Issue #20260514 · Auto-generated</div>
+      <div class="header-badges">
+        <span class="header-badge">📍 4 Regions</span>
+        <span class="header-badge">🔍 Deep Scan</span>
+        <span class="header-badge">📊 Q1'26 Earnings Cycle</span>
+        <span class="header-badge">🎯 Action-Ready</span>
       </div>
     </div>
   </div>
 
-  <!-- STAT BAR -->
+  <!-- STATS BAR -->
   <div class="stat-bar">
-    <div class="stat"><div class="num">42</div><div class="label">Total Signals</div></div>
-    <div class="stat"><div class="num">11</div><div class="label">Reddit Mentions</div></div>
-    <div class="stat"><div class="num">9</div><div class="label">Investor Items</div></div>
-    <div class="stat"><div class="num">8</div><div class="label">Industry News</div></div>
-    <div class="stat"><div class="num">12</div><div class="label">Competitor Signals</div></div>
-    <div class="stat"><div class="num">10</div><div class="label">Actions</div></div>
+    <div class="stat"><div class="num">62</div><div class="label">Total Signals</div></div>
+    <div class="stat"><div class="num">11</div><div class="label">Reddit / Forums</div></div>
+    <div class="stat"><div class="num">18</div><div class="label">Investor Items</div></div>
+    <div class="stat"><div class="num">14</div><div class="label">Industry News</div></div>
+    <div class="stat"><div class="num">19</div><div class="label">Competitor Signals</div></div>
+    <div class="stat"><div class="num">10</div><div class="label">Actions Ranked</div></div>
   </div>
 
   <!-- REGION TABS -->
-  <div class="tabs-wrapper">
-    <div class="tabs" role="tablist">
-      <button class="tab active" data-tab="amer" role="tab"><span class="flag">🇺🇸</span> AMER <span class="count">21</span></button>
-      <button class="tab" data-tab="eu" role="tab"><span class="flag">🇪🇺</span> EU <span class="count">11</span></button>
-      <button class="tab" data-tab="apac" role="tab"><span class="flag">🌏</span> APAC <span class="count">8</span></button>
-      <button class="tab" data-tab="latam" role="tab"><span class="flag">🌎</span> LATAM <span class="count">4</span></button>
-    </div>
+  <div class="region-tabs" role="tablist">
+    <button class="region-tab active" data-region="amer" role="tab"><span class="tab-flag">🇺🇸</span>AMER<span class="tab-count">28</span></button>
+    <button class="region-tab" data-region="eu" role="tab"><span class="tab-flag">🇪🇺</span>EU<span class="tab-count">14</span></button>
+    <button class="region-tab" data-region="apac" role="tab"><span class="tab-flag">🌏</span>APAC<span class="tab-count">11</span></button>
+    <button class="region-tab" data-region="latam" role="tab"><span class="tab-flag">🌎</span>LATAM<span class="tab-count">9</span></button>
   </div>
 
-  <!-- =========================== AMER TAB =========================== -->
-  <div class="tab-content active" id="amer">
+  <!-- ============= AMER PANEL ============= -->
+  <div class="region-panel active" id="panel-amer">
 
     <!-- ACTION BOARD -->
     <div class="action-board">
       <h2>🎯 Priority Action Board — AMER</h2>
-      <p class="subtitle">Marketing & Comms actions ranked by urgency, based on today's intelligence signals</p>
+      <p class="subtitle">Marketing &amp; Comms actions ranked by urgency, calibrated to today's intelligence signals from the US/Canada market.</p>
       <div class="action-columns">
         <div class="action-col urgent">
-          <h3>🔴 Urgent — Today/Tomorrow</h3>
-
+          <h3>🔴 Urgent — Today / Tomorrow</h3>
           <div class="action-card urgent">
-            <div class="act-title">Counter Wall Street's Q1 narrative</div>
-            <div class="act-why">Morgan Stanley set $27 PT (May 8); Barclays cut to $30 (May 4). Retail on Stocktwits is up 314% and "extremely bullish" — IR has an opening to amplify the IQ SST + safe harbor story before consensus hardens around the downside.</div>
-            <div class="act-meta"><span>Press Release</span><span>Investor email</span><span>Owner: Investor Relations</span></div>
+            <div class="act-title">Counter SolarEdge "Nexis vs Enphase" Narrative</div>
+            <div class="act-why">SolarEdge Q1 +46% YoY (vs ENPH -20.6%) and Nexis platform is being positioned by analysts as the "Enphase &amp; Tesla alternative." Independent reviewers (REinnovations) call Nexis "the system installers have been waiting for."</div>
+            <div class="act-meta"><span class="fmt">Comparison microsite</span><span class="plat">Web + LinkedIn</span><span class="own">Product Marketing</span></div>
           </div>
-
           <div class="action-card urgent">
-            <div class="act-title">Push IQ9S-3P pre-order momentum</div>
-            <div class="act-why">Pre-orders opened yesterday (May 13) for the 548 VA GaN-based commercial microinverter. Wall Street has not yet credited commercial — capture the news cycle before SolarEdge Nexis launch noise builds.</div>
-            <div class="act-meta"><span>Webinar</span><span>LinkedIn + Email</span><span>Owner: Product Marketing</span></div>
+            <div class="act-title">Amplify IQ SST AI Data Center Story</div>
+            <div class="act-why">Roth Capital called ENPH "one to watch for AI exposure." Most retail/sell-side coverage still treats it as a residential solar pure play. Capture the 11 GW TAM narrative now before competitors muddy it.</div>
+            <div class="act-meta"><span class="fmt">Investor video + tech blog</span><span class="plat">YouTube, X, IR site</span><span class="own">Investor Relations</span></div>
           </div>
-
           <div class="action-card urgent">
-            <div class="act-title">Re-share CEO Annual Meeting highlights</div>
-            <div class="act-why">Badri Kothandaraman's presentation was held yesterday (May 13). Clip into 60-90s social posts on TPO momentum ($873.7M PWT backlog) and IQ SST AI data-center TAM (11 GW by 2031).</div>
-            <div class="act-meta"><span>Video clips</span><span>X / LinkedIn / YouTube</span><span>Owner: Comms</span></div>
+            <div class="act-title">Frame IQ9S Pre-Order Urgency</div>
+            <div class="act-why">IQ9S-3P Commercial pre-orders opened May 13. Safe-harbor window before the July 4, 2026 ITC construction-start deadline is closing. Installers/EPCs need to lock orders now.</div>
+            <div class="act-meta"><span class="fmt">Webinar + email blast</span><span class="plat">Enphase Installer Network</span><span class="own">Channel Marketing</span></div>
           </div>
         </div>
-
         <div class="action-col week">
           <h3>🟡 This Week</h3>
-
           <div class="action-card week">
-            <div class="act-title">Run "Q1 sell-through reality check"</div>
-            <div class="act-why">US sell-through fell 48% QoQ post-25D expiration; channel inventory is high. Get ahead of installer anxiety with a partner webinar on the post-25D playbook (TPO/PPL, prepaid leases, FEOC SKUs).</div>
-            <div class="act-meta"><span>Webinar</span><span>Installer Portal</span><span>Owner: Product Marketing</span></div>
+            <div class="act-title">Tell the TPO Pivot Story Loud</div>
+            <div class="act-why">$873.7M safe-harbor backlog is the under-told story. Wood Mac forecasts TPO to capture 69% of resi in 2026. Position Enphase as the #1 TPO-aligned microinverter brand.</div>
+            <div class="act-meta"><span class="fmt">White paper + podcast</span><span class="plat">LinkedIn + Trade press</span><span class="own">PR Team</span></div>
           </div>
-
           <div class="action-card week">
-            <div class="act-title">Tesla Powerwall 3 head-to-head asset</div>
-            <div class="act-why">Tesla now leads residential inverter share (33.4% Q4 2025, per Wood Mackenzie); multiple "Powerwall vs Enphase" articles ranking in search. Refresh comparison page with 15-yr warranty, modular AC-coupling, and FEOC angle.</div>
-            <div class="act-meta"><span>Web/SEO</span><span>enphase.com</span><span>Owner: Product Marketing</span></div>
+            <div class="act-title">Defend Battery Premium with TCO Math</div>
+            <div class="act-why">Multiple comparison sites (PowMr, OhmSnap, Heated Battery) flag Enphase's $1,400-$1,800/kWh as 30-40% over Tesla Powerwall 3. Counter with 15-yr warranty + retrofit simplicity + 25-yr microinverter ROI.</div>
+            <div class="act-meta"><span class="fmt">Calculator + landing page</span><span class="plat">enphase.com + paid social</span><span class="own">Product Marketing</span></div>
           </div>
-
           <div class="action-card week">
-            <div class="act-title">Sunlight Backup expectation reset</div>
-            <div class="act-why">Long-running DIY Solar / re-wrenches threads call Sunlight Backup "useless without a battery" — installers steering customers away. Publish honest "best fit for Sunlight Backup" guidance + paired-battery upsell content.</div>
-            <div class="act-meta"><span>Blog + Video</span><span>YouTube + r/solar AMA</span><span>Owner: Product Marketing</span></div>
+            <div class="act-title">Spotlight Capital Good Fund / BRIGHT</div>
+            <div class="act-why">24 MW deployment to LMI/nonprofit customers in GA + PA is a high-ESG narrative going untold. Industry press has covered it lightly; mainstream business press hasn't picked it up.</div>
+            <div class="act-meta"><span class="fmt">Earned media + case study</span><span class="plat">Bloomberg, NYT, Atlanta press</span><span class="own">Comms</span></div>
           </div>
-
           <div class="action-card week">
-            <div class="act-title">Amplify $52M new TPO safe-harbor deal</div>
-            <div class="act-why">May 7 announcement got light coverage; PWT backlog now $873.7M (revenue 2027–2030). This is the story that earns ENPH a re-rating — package for retail investor audiences (Stocktwits, X, YouTube).</div>
-            <div class="act-meta"><span>Social</span><span>X / Stocktwits / YouTube</span><span>Owner: Investor Relations</span></div>
+            <div class="act-title">Refresh "Sunlight Backup" Education</div>
+            <div class="act-why">DIY Solar Forum threads (active in Feb-Apr 2026) show ongoing confusion about IQ8 grid-forming requirements, IQ System Controller need, and AC-coupling caveats. Education vacuum = lost mid-funnel.</div>
+            <div class="act-meta"><span class="fmt">Explainer video + FAQ</span><span class="plat">YouTube + r/solar AMA</span><span class="own">Product Marketing</span></div>
           </div>
         </div>
-
         <div class="action-col ongoing">
           <h3>🟢 Ongoing</h3>
-
           <div class="action-card ongoing">
-            <div class="act-title">Own the "AI data center" narrative</div>
-            <div class="act-why">IQ SST positions Enphase outside residential solar's policy cycle. Build a sustained content drumbeat — explainer videos, hyperscaler case studies, GaN/SiC technical content — before SolarEdge's AI data center roadmap takes the mindshare.</div>
-            <div class="act-meta"><span>Series</span><span>YouTube + LinkedIn</span><span>Owner: Comms + PMM</span></div>
+            <div class="act-title">Build Out r/Enphase + r/solar Presence</div>
+            <div class="act-why">Reddit ENPH ticker mentions sit in the 1st percentile vs peers (altindex data). Discussion happens but Enphase has minimal first-party voice. AMA series + verified employee accounts.</div>
+            <div class="act-meta"><span class="fmt">AMAs + community engagement</span><span class="plat">Reddit r/solar + r/Enphase</span><span class="own">Social Team</span></div>
           </div>
-
           <div class="action-card ongoing">
-            <div class="act-title">FEOC + Domestic Content drumbeat</div>
-            <div class="act-why">"DOM" SKU IQ9 microinverters give installers a clear win under 48E and domestic-content bonus. Continue weekly installer-facing content; partner with TPO providers for joint launches.</div>
-            <div class="act-meta"><span>Co-marketing</span><span>Installer Portal + Partner</span><span>Owner: Product Marketing</span></div>
+            <div class="act-title">Installer "Inverter Replacement Cost" Series</div>
+            <div class="act-why">SolarEdge inverter replacement at year 12-15 ($2k-$4k) is a structural competitive advantage for Enphase that few homeowners understand at point-of-sale. Arm installers with collateral.</div>
+            <div class="act-meta"><span class="fmt">Sales toolkit + battlecards</span><span class="plat">Enphase Installer Portal</span><span class="own">Channel Marketing</span></div>
           </div>
-
           <div class="action-card ongoing">
-            <div class="act-title">Installer Hero stories</div>
-            <div class="act-why">Counter generic competitor reviews with installer testimonials on commercial wins (e.g., SunFlower LLC); position Enphase as the partner of choice for reliability-first installers.</div>
-            <div class="act-meta"><span>Video / Case study</span><span>Web + LinkedIn</span><span>Owner: PR/Comms</span></div>
+            <div class="act-title">Q2'26 Sentiment Watch Dashboard</div>
+            <div class="act-why">Stock down ~42% over 12 months. Analyst PTs range from $27 (Morgan Stanley) to $57 (Oppenheimer) — a 110% spread. Track sentiment shifts heading into Q2 print (early August).</div>
+            <div class="act-meta"><span class="fmt">Weekly internal dashboard</span><span class="plat">Internal / IR team</span><span class="own">Investor Relations</span></div>
           </div>
         </div>
       </div>
@@ -707,1046 +598,905 @@
 
     <!-- KEY TAKEAWAYS -->
     <div class="section">
-      <h2><span class="icon">⚡</span> Today's Key Takeaways — AMER</h2>
+      <h2>⚡ Today's Key Takeaways — AMER</h2>
       <ul class="takeaway-list">
-        <li class="urgent">Pre-orders for the new <strong>IQ9S-3P GaN Commercial Microinverter</strong> (548 VA, 770 W panels, 97.5% CEC efficiency) opened May 13 — first U.S. shipments expected June 2026. <a href="https://investor.enphase.com/news-releases/news-release-details/enphase-energy-opens-us-pre-orders-gan-based-548-va-iq9s" target="_blank">Source</a></li>
-        <li class="urgent">Wall Street is trimming: <strong>Morgan Stanley $27</strong> (May 8), <strong>Barclays $30</strong>, <strong>Evercore $37</strong> — but retail sentiment surged 314% on Stocktwits. Communications gap is widening.</li>
-        <li>Q1 2026 results (April 28): <strong>$282.9M revenue</strong> (vs $343M Q4'25), $34.5M safe harbor; US sell-through down 48% QoQ post-25D; <strong>$83M free cash flow</strong>; $930.6M cash position.</li>
-        <li><strong>IQ Solid-State Transformer for AI data centers</strong> announced April 28: 11 GW initial U.S. opportunity by 2031, pilot 2027, volume shipments 2028. Wall Street has not yet priced this in.</li>
-        <li>Tesla Powerwall 3 now leads U.S. residential inverters at <strong>33.4% Q4 share</strong> (Wood Mackenzie) — Enphase, SolarEdge, Tesla now neck-and-neck inside a 2.1 ppt range.</li>
+        <li class="urgent"><strong>SolarEdge bounced first</strong> — SEDG posted +46% YoY Q1 growth and is shifting "decisively to offense" with Nexis rollout and AI data-center pivot. ENPH posted -20.6% YoY in the same quarter. Narrative gap forming.</li>
+        <li class="urgent"><strong>IQ9S-3P Commercial pre-orders went live May 13</strong>, the same day as the Annual Meeting. With production shipments in June and the July 4, 2026 ITC construction-start deadline, the safe-harbor sales window is now.</li>
+        <li><strong>$873.7M TPO safe-harbor backlog</strong> revealed in May 7 press release (incl. fresh $52M deal) is materially under-discussed by sell-side. This is recurring 2027-2030 revenue locked in.</li>
+        <li><strong>Analyst PTs compressed sharply after Q1</strong> — Citi $31, Susquehanna $32, JPM $35, TD Cowen $35, Barclays $30; offset by Oppenheimer $57 and Wells Fargo $45. Median is now ~$37 (was $50 in February).</li>
+        <li><strong>The IQ Solid-State Transformer is a category bet, not a residential play</strong>. Pilots 2027, volume 2028, 11 GW TAM by 2031. Roth Capital flagged it as a reason to put ENPH on a "data center watch list" — a tag IR should aggressively own.</li>
       </ul>
     </div>
 
-    <!-- REDDIT INTELLIGENCE -->
+    <!-- REDDIT -->
     <div class="section">
-      <h2><span class="icon">🟠</span> Reddit Intelligence <span class="section-label">Deep Scan</span></h2>
-      <p class="section-subtitle">All Enphase mentions classified by sentiment — positive, then negative, then neutral</p>
-
+      <h2>🟠 Reddit &amp; Installer Forum Intelligence <span class="section-label">Deep Scan</span></h2>
       <div class="sentiment-summary">
         <div class="sent-box pos"><div class="count">4</div><div class="lbl">✅ Positive</div></div>
-        <div class="sent-box neg"><div class="count">5</div><div class="lbl">❌ Negative</div></div>
-        <div class="sent-box neu"><div class="count">2</div><div class="lbl">⚪ Neutral</div></div>
-      </div>
-
-      <!-- Positive -->
-      <div class="card positive">
-        <div class="source">r/Stocktwits-aligned · ENPH discussion</div>
-        <div class="title"><a href="https://stocktwits.com/news-articles/markets/equity/enph-stock-wall-street-turns-cautious-after-q1-print-why-is-retail-still-bullish/cZQwqoTReB9" target="_blank">Retail still "extremely bullish" on ENPH despite Wall Street caution</a> <span class="badge positive">Positive</span></div>
-        <div class="excerpt">Stocktwits chatter surged 314% in 24h post-Q1. One bullish user: "If Enphase nails the IQ SST data-center product, their share price could be $500 in 2028." Another points to weaker USD, lower rates, and international recovery as tailwinds.</div>
+        <div class="sent-box neg"><div class="count">3</div><div class="lbl">❌ Negative</div></div>
+        <div class="sent-box neu"><div class="count">4</div><div class="lbl">⚪ Neutral</div></div>
       </div>
 
       <div class="card positive">
-        <div class="source">DIY Solar Power Forum · long thread (continuing 2026)</div>
-        <div class="title"><a href="https://diysolarforum.com/threads/enphase-iq8-reviews-experiences.52002/" target="_blank">"IQ8s in my IQ batteries for years, no issues — rock solid"</a> <span class="badge positive">Positive</span></div>
-        <div class="excerpt">Long-running user testimony with consistent praise for the 25-year warranty and reliability when sourced through authorized channels. Amazon's mixed reviews tied to grey-market resellers.</div>
+        <div class="source">DIY Solar Forum · drewc · Oct 2025 (still trending)</div>
+        <div class="title">"Deeply Impressed by the 4th Gen Enphase ESS" <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">"This latest 4th gen of Enphase hardware is so stupid simple it's completely impossible to screw up… really good software really make me wonder if the AC-DC-AC round trip losses maybe really are worth it. The meter collar is such an awesome concept."</div>
+        <div class="link-row"><a href="https://diysolarforum.com/threads/deeply-impressed-by-the-4th-gen-enphase-ess.114599/" target="_blank">View thread →</a></div>
       </div>
 
       <div class="card positive">
-        <div class="source">r/solar adjacent · OhmSnap 2026 IQ8 review (cited widely on Reddit)</div>
-        <div class="title"><a href="https://ohmsnap.com/blog/enphase-iq8-microinverter-review-2026" target="_blank">"IQ8 is the industry standard for residential microinverters in 2026"</a> <span class="badge positive">Positive</span></div>
-        <div class="excerpt">Highlights 50–55% Enphase share of U.S. residential inverters, 25-yr warranty, integrated ecosystem. Concludes premium is justified for complex roofs, shading, outage-prone homes, long-term owners.</div>
+        <div class="source">DIY Solar Forum · multiple users</div>
+        <div class="title">IQ8H + IQ Batteries praised for rock-solid multi-year operation <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">"I've had IQ8s in my IQ batteries for a couple of years now, no issues with them and they work rock-solid… With the 25-year warranty, I don't see how you can go wrong." Sentiment in IQ8 review threads tilts strongly toward warranty + reliability advantage.</div>
+        <div class="link-row"><a href="https://diysolarforum.com/threads/enphase-iq8-reviews-experiences.52002/" target="_blank">View thread →</a></div>
       </div>
 
       <div class="card positive">
-        <div class="source">r/RenewableEnergy · IQ Battery 5P discussion</div>
-        <div class="title"><a href="https://www.ohmsnap.com/blog/enphase-iq-battery-5p-review-2026" target="_blank">15-year warranty + modular design wins for retrofit upgrades</a> <span class="badge positive">Positive</span></div>
-        <div class="excerpt">Users note the 5-yr advantage over Tesla Powerwall warranty and the no-single-point-of-failure modular architecture as decisive for existing Enphase microinverter owners.</div>
+        <div class="source">OhmSnap Blog (March 2026)</div>
+        <div class="title">"Enphase IQ8 is the industry standard for residential microinverters in 2026" <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">Independent technical review estimates Enphase at 50-55% US residential inverter share. Calls 25-yr warranty, panel-level monitoring, and Sunlight Backup capability "a cohesive residential solar experience unmatched by competitors."</div>
+        <div class="link-row"><a href="https://ohmsnap.com/blog/enphase-iq8-microinverter-review-2026" target="_blank">Read review →</a></div>
       </div>
 
-      <!-- Negative -->
-      <div class="card negative">
-        <div class="source">re-wrenches mailing list · installer pro forum</div>
-        <div class="title"><a href="http://lists.re-wrenches.org/pipermail/re-wrenches-re-wrenches.org/2024/237263.html" target="_blank">"I don't have a single client satisfied with Sunlight Backup setup"</a> <span class="badge negative">Negative</span></div>
-        <div class="excerpt">Senior installer: 64A PV hard limit on IQ8 backup systems is a step backward from IQ7 (96A). Sunlight Backup "really needs at least one IQ Battery 5P to be functional" — installers actively steering customers away.</div>
-      </div>
-
-      <div class="card negative">
-        <div class="source">PSC Energy / Australia community (cross-posted on Reddit)</div>
-        <div class="title"><a href="https://www.pscenergy.com.au/blog/problems-with-the-enphase-iq-battery-5p-flexphase/" target="_blank">"Enphase arrived late to bigger battery demand"</a> <span class="badge negative">Negative</span></div>
-        <div class="excerpt">FlexPhase praised for three-phase support, but 5 kWh capacity criticized: most homes need 2–4 units pushing system cost over AUD $20K. Wall-presence and installer-clutter complaints recurring.</div>
+      <div class="card positive">
+        <div class="source">8MSolar (NC Platinum Installer)</div>
+        <div class="title">IQ8 reliability holds at sub-0.05% failure rate <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">"Enphase has earned its reputation as an industry leader… Their IQ8 microinverter series offers unmatched flexibility, panel-level optimization, and limited backup functionality during grid outages — without requiring a battery."</div>
+        <div class="link-row"><a href="https://8msolar.com/enphase-micro-inverter-review/" target="_blank">View →</a></div>
       </div>
 
       <div class="card negative">
-        <div class="source">r/solar · Tesla Powerwall vs Enphase discussions</div>
-        <div class="title"><a href="https://chargehomesolutions.com/tesla-powerwall-3-vs-all-other-home-battery-brands-2026-comparison/" target="_blank">Installer: "PW3 system was at least 20% cheaper than Enphase"</a> <span class="badge negative">Negative</span></div>
-        <div class="excerpt">Multiple installer commenters say Powerwall 3 setups are dramatically cheaper for similar capacity. Enphase batteries criticized as "over priced for their anemic output and storage capacity ratings."</div>
+        <div class="source">DIY Solar Forum · April 2026</div>
+        <div class="title">"Enphase is probably the most difficult grid-tied inverter for off-grid AC coupling" <span class="badge negative">NEGATIVE</span></div>
+        <div class="excerpt">Active thread (Feb-Apr 2026) on the 18.4kW IQ8 + EG4/Sol-Ark/SMA scenarios: "Aggressive anti-islanding disturbances especially the IQ8… Enphase won't open up access to their proprietary or SunSpec control interfaces." Pushes DIY users toward competitor ecosystems.</div>
+        <div class="link-row"><a href="https://diysolarforum.com/threads/ac-coupled-battery-grid-forming-question-current-18-4kw-system-with-enphase-micro.121663/" target="_blank">View thread →</a></div>
       </div>
 
       <div class="card negative">
-        <div class="source">DIY Solar · golf-cart/off-grid IQ8 use case thread</div>
-        <div class="title"><a href="https://diysolarforum.com/threads/anyone-with-enphase-iq8-experience.101667/" target="_blank">Frustration with IQ Gateway/System Controller bundle cost</a> <span class="badge negative">Negative</span></div>
-        <div class="excerpt">Users discovering they cannot use IQ8 microinverters off-label without expensive ($504+) Gateway and the System Controller's neutral-forming transformer. Community perception: "Enphase locks you in."</div>
+        <div class="source">DIY Solar Forum · 7-bid homeowner</div>
+        <div class="title">5 of 7 installers steering homeowner to Powerwall 3 over Enphase <span class="badge negative">NEGATIVE</span></div>
+        <div class="excerpt">"2 are pushing Enphase microinverters and the other 5 insist a Powerwall 3 with its multiple strings is just as efficient." Commenters confirm: "PW3 system would be a lot cheaper and practical… we just installed a PW3 system and it was at least 20% cheaper than a similar Enphase system."</div>
+        <div class="link-row"><a href="https://diysolarforum.com/threads/enphase-iq8-vs-tesla-powerwall-3.103713/" target="_blank">View thread →</a></div>
       </div>
 
       <div class="card negative">
-        <div class="source">DIY Solar Forum · IQ8H + 595W panel thread</div>
-        <div class="title"><a href="https://diysolarforum.com/threads/enphase-iq8h-microinverter-and-595w-panel.78378/" target="_blank">"Use optimizers + string instead — saves $10–15k vs micros"</a> <span class="badge negative">Negative</span></div>
-        <div class="excerpt">Strong DIY anti-microinverter argument citing 384W IQ8H clipping with 595W modern panels; cost-conscious installers recommending SolarEdge optimizers for high-wattage builds.</div>
-      </div>
-
-      <!-- Neutral -->
-      <div class="card neutral">
-        <div class="source">AltIndex Reddit mention tracker · 2026 YTD</div>
-        <div class="title"><a href="https://altindex.com/ticker/enph/reddit-mentions" target="_blank">ENPH Reddit mentions trail industry peers (1st percentile)</a> <span class="badge neutral">Neutral</span></div>
-        <div class="excerpt">Sentiment score 64/100 (neutral-positive). Reddit mention volume relatively low vs. SolarEdge and Tesla — indicates a coverage/conversation gap to address.</div>
+        <div class="source">DIY Solar Forum · early-2026 thread</div>
+        <div class="title">Battery pricing premium is a recurring objection <span class="badge negative">NEGATIVE</span></div>
+        <div class="excerpt">"Enphase batteries are over priced for their rather anemic output and storage capacity ratings. Overall Tesla should either be less expensive for a similar sized system or be larger at the same price point as Enphase."</div>
+        <div class="link-row"><a href="https://diysolarforum.com/threads/enphase-iq8-vs-tesla-powerwall-3.103713/" target="_blank">View thread →</a></div>
       </div>
 
       <div class="card neutral">
-        <div class="source">r/DIYsolar · System Controller capacity questions</div>
-        <div class="title"><a href="https://diysolarforum.com/threads/adding-additional-non-enphase-batteries-to-enphase-iq8-with-controller-2.85968/" target="_blank">Can I add non-Enphase batteries to my IQ8 + Controller 2 system?</a> <span class="badge neutral">Neutral</span></div>
-        <div class="excerpt">Active 2024-2026 thread of Enphase owners exploring third-party AC-coupled hybrid options (Sol-Ark, Schneider XW Pro, SMA Sunny Island). Mostly comparison/question content — not pro or anti.</div>
+        <div class="source">DIY Solar Forum · Collin8579 · Apr 16, 2026</div>
+        <div class="title">"Enphase Whole Home backup Question - 10C Base" <span class="badge neutral">NEUTRAL</span></div>
+        <div class="excerpt">Active configuration question on the IQ10C base setup — high installer/owner interest in 4th-gen Enphase ESS but ongoing confusion about IQ System Controller + meter collar MID compatibility.</div>
+      </div>
+
+      <div class="card neutral">
+        <div class="source">altindex / Reddit mentions tracker</div>
+        <div class="title">ENPH Reddit mention rank: 1st percentile vs peers <span class="badge neutral">NEUTRAL</span></div>
+        <div class="excerpt">Sentiment score 64/100 (neutral); only an estimated ~1 daily mention in investing subreddits. Enphase is structurally under-represented in retail investor conversation vs SolarEdge and Tesla Energy.</div>
+        <div class="link-row"><a href="https://altindex.com/ticker/enph/reddit-mentions" target="_blank">View tracker →</a></div>
+      </div>
+
+      <div class="card neutral">
+        <div class="source">SolarPanelTalk Forum · CA homeowner · Dec 2025</div>
+        <div class="title">"Are Enphase Micro Converters still energized during a power outage?" <span class="badge neutral">NEUTRAL</span></div>
+        <div class="excerpt">CA homeowner with 21 panels + IQ8 micros asks if there's a workaround to access solar during outages without the $7K IQ System Controller. Answer in thread: no cheap workaround — IQ System Controller is required for Sunlight Backup.</div>
+        <div class="link-row"><a href="https://www.solarpaneltalk.com/forum/solar-panels-for-home/solar-panels-for-your-home/444334-are-enphase-micro-converters-still-energized-during-a-power-outage" target="_blank">View thread →</a></div>
+      </div>
+
+      <div class="card neutral">
+        <div class="source">DIY Solar Forum · Nod51 · Mar 13, 2026</div>
+        <div class="title">"New whole house backup: Enphase IQ8 vs EG4" <span class="badge neutral">NEUTRAL</span></div>
+        <div class="excerpt">High-engagement thread comparing Enphase ecosystem cost vs EG4 hybrid setups for whole-home backup. Recurring theme: Enphase wins on simplicity + integration; EG4 wins on $/kWh.</div>
       </div>
     </div>
 
     <!-- COMPETITOR ANALYSIS -->
     <div class="section">
-      <h2><span class="icon">⚔️</span> Competitor Analysis <span class="section-label">Market Intelligence</span></h2>
+      <h2>⚔️ Competitor Analysis <span class="section-label">Market Intelligence</span></h2>
       <table class="comp-table">
         <thead>
-          <tr>
-            <th>Competitor</th>
-            <th>Latest News / Activity</th>
-            <th>Community Sentiment</th>
-            <th>Threat</th>
-            <th>vs Enphase</th>
-          </tr>
+          <tr><th>Competitor</th><th>Latest News / Activity</th><th>Community Sentiment</th><th>Threat Level</th><th>vs Enphase</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>SolarEdge</strong><br><span style="font-size:11px;color:#888">NASDAQ: SEDG</span></td>
-            <td>Q1 results May 6: <strong>$310.5M rev</strong> (+46% YoY), narrowing losses, Nexis platform rolling out in Germany, AI data center roadmap accelerating</td>
-            <td>Mixed — efficiency gains praised; legacy reliability complaints persist</td>
-            <td class="threat-high">🔴 HIGH</td>
-            <td>Beat ENPH Q1 revenue YoY growth; pursuing same AI data-center TAM with different architecture</td>
+            <td><strong>SolarEdge</strong> (SEDG)</td>
+            <td>Q1 2026: $310.5M, <strong>+46% YoY</strong>; sixth consecutive quarter of margin expansion. Nexis platform rolling out; AI data-center power roadmap announced.</td>
+            <td>Independent reviewers calling Nexis "the system installers have been waiting for"</td>
+            <td class="threat-high">HIGH</td>
+            <td>Beating ENPH on YoY growth direction; both pursuing AI data-center pivot</td>
           </tr>
           <tr>
-            <td><strong>APsystems</strong></td>
-            <td>EZ1 plug-in microinverter direct-to-consumer launched Feb 10 ($325). New QS2 quad microinverter (2200 VA) for residential</td>
-            <td>Strong in EU balcony solar; growing US DIY mindshare</td>
-            <td class="threat-med">🟡 MEDIUM</td>
-            <td>Entering Enphase's residential turf with cheaper alternative; 25-yr warranty now matches Enphase</td>
+            <td><strong>Tesla</strong> (Powerwall)</td>
+            <td>Powerwall 3P (3-phase, 13.5 kWh, 15.4 kW continuous) launched April 23 in Europe. 46.7 GWh deployed in 2025 (+48% YoY).</td>
+            <td>"PW3 ~20% cheaper than Enphase" per installer DIY threads; concerns over Tesla support quality</td>
+            <td class="threat-high">HIGH</td>
+            <td>Wins on $/kWh + integrated inverter; loses on shade/partial-roof flexibility</td>
           </tr>
           <tr>
             <td><strong>Hoymiles</strong></td>
-            <td>HiFlow / HiFlow Pro for EU balcony (Apr 7); 360 MW India deal with Kosol (Jan 28); 10-yr Brazil anniversary; hybrid micro-storage launching June</td>
-            <td>Aggressive global expansion, especially in EU plug-in and India RTS</td>
-            <td class="threat-med">🟡 MEDIUM</td>
-            <td>Capturing emerging markets where Enphase has retreated (Brazil retrenchment, India absence)</td>
+            <td>360 MW Kosol Energie India deal; HiFlow/HiFlow Pro plug-in microinverters in Europe; MIS-2500-W Pro launched Brazil. Hybrid micro-storage launching June 2026.</td>
+            <td>Positioned as 15-25% cheaper alternative; gaining mindshare in DIY + emerging markets</td>
+            <td class="threat-med">MED-HIGH</td>
+            <td>No US Sunlight Backup equivalent; multi-panel topology wins on cost/W</td>
           </tr>
           <tr>
-            <td><strong>SMA Solar</strong><br><span style="font-size:11px;color:#888">FWB: S92</span></td>
-            <td>Q1 May 13: €340.9M rev (+4%), HBS +27% YoY on EU rooftop demand surge; <strong>exiting Australian resi market</strong>; pivoting to utility-scale + grid-forming</td>
-            <td>Strong premium-installer reputation; ceding home market in select regions</td>
-            <td class="threat-low">🟢 LOW</td>
-            <td>Strategic retreat from residential = opportunity for Enphase to capture SMA's installer base in AUS</td>
+            <td><strong>APsystems</strong></td>
+            <td>EZ1-LV direct US online sales launched Feb 10 ($325). QS2 quad microinverter (2,200 VA, 4-panel) shipping globally with 12-25 yr warranty.</td>
+            <td>Strong reception for DIY/balcony solar; installer network being preserved</td>
+            <td class="threat-med">MEDIUM</td>
+            <td>Owns plug-in/balcony category Enphase doesn't compete in (yet)</td>
           </tr>
           <tr>
-            <td><strong>Tesla Powerwall</strong></td>
-            <td>Wood Mackenzie: <strong>Tesla #1 US residential inverter (33.4% Q4 2025)</strong>, +16.5 ppts YoY. Powerwall 3 dominates 13.5 kWh + integrated inverter category</td>
-            <td>Brand strength balanced by recall, Musk fatigue, long install wait times</td>
-            <td class="threat-high">🔴 HIGH</td>
-            <td>Direct head-to-head; took share from Enphase post-SunPower collapse. Articles recommending PW3 alternatives are SEO-friendly opportunity</td>
+            <td><strong>SMA Solar</strong></td>
+            <td>2025 EBIT -€188.2M (widened loss); HBS revenue -30% YoY. Sunny Boy Smart Energy 5.0 topped 2026 German Stromspeicher-Inspektion. 2026 EBITDA guide €50-180M.</td>
+            <td>Restructuring fatigue; strong technical respect in DACH residential</td>
+            <td class="threat-low">LOW</td>
+            <td>Not a US residential threat near-term; Europe HBS gap creates opportunity for Enphase</td>
           </tr>
         </tbody>
       </table>
 
+      <h3 style="font-size:14px; margin:24px 0 12px; color:var(--enphase-navy); font-weight:700;">Deep-Dive Cards</h3>
+
       <div class="card competitor">
-        <div class="source">SolarEdge · Q1 2026 deep dive</div>
-        <div class="title"><a href="https://www.pv-tech.org/solaredge-reduces-net-loss-maintains-22-margin-in-q1-2026/" target="_blank">SolarEdge narrows net loss, expects near-breakeven Q2</a></div>
-        <div class="excerpt">CEO Shuki Nir: "We have shifted decisively to offense." SolarEdge guides Q2 revenue $325–355M (vs Enphase $280–310M). Has fully booked Q2 Nexis production for Europe. $583M cash. 90%+ of inverter/optimizer production now in U.S. Onshoring narrative directly competes with Enphase's domestic-content pitch.</div>
+        <div class="source">SolarEdge · Q1 2026 Earnings Call · May 6</div>
+        <div class="title">SEDG "shifting from defense to offense" with Nexis + AI data-center bet</div>
+        <div class="excerpt">CEO Shuki Nir: "2026 is a year of transformation and acceleration… driving profitable growth, expanding global market share, scaling SolarEdge Nexis, and investing in high-growth adjacencies such as AI data center power." US revenue $150M (51% mix); Europe up 14% QoQ; Q2 guide $325-355M with non-GAAP margin 23-27%. Cash $583M. Important to monitor: Nexis is positioned by independent reviewers as "the most compelling residential energy platform SolarEdge has brought to market in years."</div>
+        <div class="link-row"><a href="https://www.pv-tech.org/solaredge-reduces-net-loss-maintains-22-margin-in-q1-2026/" target="_blank">PV Tech coverage →</a> &nbsp;|&nbsp; <a href="https://investors.solaredge.com/news-releases/news-release-details/solaredge-announces-first-quarter-2026-financial-results" target="_blank">Press release →</a></div>
       </div>
 
       <div class="card competitor">
-        <div class="source">Tesla · Wood Mackenzie 2025 Year in Review</div>
-        <div class="title"><a href="https://www.woodmac.com/news/opinion/the-us-solar-industry-navigated-unprecedented-change-in-20253" target="_blank">Tesla took residential inverter #1 spot in Q4 2025</a></div>
-        <div class="excerpt">Enphase declined 13 percentage points in 2025; SolarEdge staged comeback. Powerwall 3 popularity + SunPower customer loss are the two largest contributors to Enphase share erosion. Concentrate response on storage-led TPO economics.</div>
+        <div class="source">Tesla Energy · April-May 2026</div>
+        <div class="title">Powerwall 3P launch closes the EU three-phase gap</div>
+        <div class="excerpt">Powerwall 3P (single-box three-phase, 13.5 kWh, 15.4 kW continuous, 21 kW peak, 4 MPPTs, 98.4% efficiency) shipped from Gigafactory Berlin starting April 23. Up to 4× units = 61.6 kW / 94.5 kWh. Electrek: "Tesla is expecting a slowdown in Powerwall demand in the US. It needs the EU market to pick up." Direct head-to-head with Enphase IQ Battery 5P + FlexPhase in DACH/Benelux.</div>
+        <div class="link-row"><a href="https://electrek.co/2026/02/13/tesla-announces-powerwall-3p-with-native-three-phase-inverter/" target="_blank">Electrek →</a> &nbsp;|&nbsp; <a href="https://www.pv-magazine.com/2026/04/23/tesla-launches-three-phase-powerwall-3p/" target="_blank">PV Magazine →</a></div>
       </div>
 
       <div class="card competitor">
-        <div class="source">APsystems · EZ1 launch — solar industry coverage</div>
-        <div class="title"><a href="https://pv-magazine-usa.com/2026/02/10/apsystems-opens-direct-u-s-sales-of-ez1-microinverter-for-diy-plug-in-solar/" target="_blank">APsystems opens DTC channel for plug-in microinverters in the U.S.</a></div>
-        <div class="excerpt">$295–325 EZ1-LV with 97.3% efficiency, IP67. Plug-in balcony solar is a category Enphase does not address. Risk: APsystems builds brand affinity with first-time solar buyers who later go rooftop.</div>
+        <div class="source">Hoymiles · Multi-region momentum</div>
+        <div class="title">Hoymiles aggressive on India, Brazil, EU plug-in</div>
+        <div class="excerpt">(1) 360 MW Kosol Energie India deal — largest microinverter contract in Indian history. (2) MIS-2500-W Pro 4-in-1 launched at Brazil 10-yr anniversary; 98% efficiency claim; 15 distributor agreements signed. (3) HiFlow / HiFlow Pro Europe plug-in series; hybrid micro-storage launching June 2026. Hoymiles cited explicitly by OhmSnap as "the budget alternative to Enphase… 15-25% less."</div>
+        <div class="link-row"><a href="https://finance.yahoo.com/news/hoymiles-secures-indias-largest-ever-034500306.html" target="_blank">India deal →</a> &nbsp;|&nbsp; <a href="https://www.prnewswire.com/news-releases/hoymiles-celebrates-10th-anniversary-in-brazil-with-new-office-opening-and-high-power-microinverter-launch-302725951.html" target="_blank">Brazil launch →</a></div>
       </div>
 
       <div class="card competitor">
-        <div class="source">SMA Solar · strategic shift</div>
-        <div class="title"><a href="https://www.pv-magazine-australia.com/2026/05/06/sma-exits-australian-small-scale-market-in-favour-of-utility-sector/" target="_blank">SMA exits Australian residential market; focuses on grid-forming utility-scale</a></div>
-        <div class="excerpt">CEO cites Chinese-driven commoditization. Creates a vacuum among Australian premium installers — Enphase IQ Battery 5P + FlexPhase + Evergen VPP integration is the natural replacement story.</div>
+        <div class="source">APsystems · Feb-Mar 2026</div>
+        <div class="title">EZ1 plug-in microinverter goes direct-to-consumer in US</div>
+        <div class="excerpt">Online store opened Feb 10 at $325 ($295 to installers). EZ1 targets renters/balconies/portable — a market Enphase does not yet serve in the US. APsystems claim DTC "expands awareness without competing with installers." Combined with the QS2 quad microinverter (2,200 VA, four MPPTs, 25-yr extendable warranty), APsystems is broadening at both ends of the residential funnel.</div>
+        <div class="link-row"><a href="https://pv-magazine-usa.com/2026/02/10/apsystems-opens-direct-u-s-sales-of-ez1-microinverter-for-diy-plug-in-solar/" target="_blank">PV Magazine USA →</a></div>
       </div>
 
       <div class="card competitor">
-        <div class="source">Hoymiles · global expansion</div>
-        <div class="title"><a href="https://www.prnewswire.com/apac/news-releases/hoymiles-secures-indias-largest-ever-microinverter-deal-with-kosol-energie-totaling-360-mw-302672014.html" target="_blank">Hoymiles signs India's largest-ever microinverter deal: 360 MW with Kosol Energie</a></div>
-        <div class="excerpt">Rooftop solar (RTS) push in India is a high-growth market with no meaningful Enphase commercial presence. Mexican manufacturing facility gives Hoymiles supply-chain resilience in LATAM where Enphase just retrenched.</div>
+        <div class="source">SMA Solar · March 26 results</div>
+        <div class="title">SMA HBS division still bleeding — opportunity in DACH for Enphase</div>
+        <div class="excerpt">Home &amp; Business Solutions revenue -30% YoY to €247.2M; EBIT loss -€375.6M on €123M inventory writedowns + restructuring charges. Germany installation rate "about 30% lower than 2024" in HBS. Sunny Boy Smart Energy 5.0 won a technical test prize but commercial momentum is weak. Tells Enphase: keep pressing on Germany/Austria/Switzerland with FlexPhase + IQ Battery 5P.</div>
+        <div class="link-row"><a href="https://www.pv-magazine.com/2026/03/26/sma-solar-technology-confirms-wider-loss-for-2025-on-weak-pv-market/" target="_blank">PV Magazine →</a></div>
       </div>
     </div>
 
-    <!-- TWITTER / X -->
+    <!-- TWITTER/X -->
     <div class="section">
-      <h2><span class="icon">🐦</span> Twitter / X Mentions</h2>
+      <h2>🐦 Twitter / X Mentions</h2>
       <div class="card neutral">
-        <div class="source">Stocktwits · ENPH ticker stream</div>
-        <div class="title"><a href="https://stocktwits.com/news-articles/markets/equity/enph-stock-wall-street-turns-cautious-after-q1-print-why-is-retail-still-bullish/cZQwqoTReB9" target="_blank">Retail messages on ENPH surged 314% in 24h — sentiment "extremely bullish"</a> <span class="badge positive">Positive retail</span></div>
-        <div class="excerpt">Most active discussions: IQ SST data center play, $843.6M YTD safe harbor agreements, undervalued vs Wall Street targets. Retail price expectations cluster around $50–$100 in 12–18 months despite analyst PT median of ~$40.</div>
+        <div class="source">@TeslaEnergy · May 2</div>
+        <div class="title">Tesla Energy promotes Powerwall 3P launch at Gigafactory Berlin <span class="badge neutral">NEUTRAL</span></div>
+        <div class="excerpt">Reposted across solar X channels; positioned by community as the "single-box answer" to multi-Powerwall stacking that previously plagued European installs — a direct competitive setup vs Enphase's modular IQ Battery 5P + FlexPhase approach.</div>
       </div>
-      <div class="card neutral">
-        <div class="source">@EnphaseEnergy + analyst handles · this week</div>
-        <div class="title">Coverage of IQ9S-3P commercial pre-order launch and CEO Annual Meeting</div>
-        <div class="excerpt">Modest organic engagement; opportunity for paid amplification around the GaN technology angle (industry-leading 97.5% CEC efficiency, 770W panel support) and AI data-center IQ SST teaser.</div>
-      </div>
+      <div class="no-data">Note: Reddit/altindex data shows ENPH ticker mentions in the 1st percentile vs peers — X conversation around $ENPH today is largely analyst-target driven (Morgan Stanley $27, Citi $31, Susquehanna $32) rather than community/product driven.</div>
     </div>
 
     <!-- LINKEDIN -->
     <div class="section">
-      <h2><span class="icon">💼</span> LinkedIn Activity</h2>
+      <h2>💼 LinkedIn Activity</h2>
       <div class="card positive">
-        <div class="source">Enphase Newsroom · LinkedIn distribution</div>
-        <div class="title"><a href="https://newsroom.enphase.com/news-releases/news-release-details/enphase-energy-expands-safe-harbor-agreement-leading-tpo" target="_blank">TPO + Safe Harbor announcements being shared by Ken Fong (SVP Sales)</a> <span class="badge positive">Positive</span></div>
-        <div class="excerpt">$873.7M PWT backlog narrative is gaining traction with B2B audiences. SVP Marco Krapels (Global Energy Markets / CMO) actively posting on Evergen + Amber Electric integrations.</div>
+        <div class="source">Enphase Investor Relations · May 13</div>
+        <div class="title">IQ9S-3P Commercial Microinverter pre-order open <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">"FREMONT, Calif., May 13, 2026 — Enphase Energy today opened U.S. pre-orders for the new IQ9S-3P Commercial Microinverter, its most powerful microinverter to date." 770W panel support, 97.5% CEC efficiency, three-phase 480Y/277V without external transformers. Production shipments June 2026.</div>
+        <div class="link-row"><a href="https://investor.enphase.com/news-releases/news-release-details/enphase-energy-opens-us-pre-orders-gan-based-548-va-iq9s" target="_blank">Press release →</a></div>
       </div>
-      <div class="card neutral">
-        <div class="source">Installer community · partner posts</div>
-        <div class="title">SunFlower LLC (NH/MA/ME) featured commercial installer for IQ9N-3P</div>
-        <div class="excerpt">From the April 13 commercial microinverter expansion press release. Reusable LinkedIn case-study content — under-amplified to date.</div>
+      <div class="card positive">
+        <div class="source">Enphase Newsroom · May 7</div>
+        <div class="title">New $52M safe harbor TPO agreement — total backlog now $873.7M <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">Ken Fong, SVP Sales: "Our IQ9 Microinverters, supplied from U.S. manufacturing facilities, give our partners a high-quality solution as they prepare for deployments under evolving tax credit rules." Revenue expected to be recognized 2027-2030.</div>
+        <div class="link-row"><a href="https://investor.enphase.com/news-releases/news-release-details/enphase-energy-announces-new-safe-harbor-agreement-us-tpo" target="_blank">Press release →</a></div>
       </div>
     </div>
 
-    <!-- MARKETING COLLATERAL -->
+    <!-- MARKETING -->
     <div class="section">
-      <h2><span class="icon">📣</span> Marketing Collateral Published Recently</h2>
-      <div class="card positive">
-        <div class="source">May 13, 2026 · Press Release</div>
-        <div class="title"><a href="https://investor.enphase.com/news-releases/news-release-details/enphase-energy-opens-us-pre-orders-gan-based-548-va-iq9s" target="_blank">Enphase opens U.S. pre-orders for IQ9S-3P GaN Commercial Microinverters</a></div>
-        <div class="excerpt">First-of-its-kind 548 VA GaN-based three-phase commercial micro; supports 770W panels; 97.5% CEC efficiency; 25-yr warranty. Production shipments June 2026.</div>
+      <h2>📣 Marketing Collateral Published Today (US)</h2>
+      <div class="card">
+        <div class="source">Enphase Newsroom · IQ9S-3P landing</div>
+        <div class="title">IQ9S-3P Commercial Microinverter product page + spec sheet</div>
+        <div class="excerpt">25-yr limited warranty on inverter, 15-yr on IQ Gateway Commercial Pro, 18A continuous DC, up to 548 VA AC, GaN-based architecture. Includes safe-harbor positioning copy linked to upcoming ITC deadlines.</div>
+        <div class="link-row"><a href="https://investor.enphase.com/news-releases/news-release-details/enphase-energy-opens-us-pre-orders-gan-based-548-va-iq9s" target="_blank">Read →</a></div>
       </div>
-      <div class="card positive">
-        <div class="source">May 7, 2026 · Press Release</div>
-        <div class="title"><a href="https://investor.enphase.com/news-releases/news-release-details/enphase-energy-announces-new-safe-harbor-agreement-us-tpo" target="_blank">New $52M Safe Harbor Agreement with U.S. TPO Provider</a></div>
-        <div class="excerpt">Total physical-work-test order backlog with TPO partners now ~$873.7M (revenue 2027–2030). Domestic-content qualifying IQ9 microinverters.</div>
-      </div>
-      <div class="card positive">
-        <div class="source">May 4, 2026 · Technical White Paper</div>
-        <div class="title"><a href="https://investor.enphase.com/news-releases/news-release-details/enphase-energy-publishes-technical-white-paper-iq-sst" target="_blank">Technical White Paper: IQ Solid-State Transformer Architecture for AI Data Centers</a></div>
-        <div class="excerpt">Detail on distributed power-conversion architecture for hyperscaler use cases. Foundational asset for the AI data-center narrative.</div>
+      <div class="card">
+        <div class="source">Enphase IR / Annual Meeting · May 13</div>
+        <div class="title">CEO Badri Kothandaraman presentation following Annual Meeting</div>
+        <div class="excerpt">Public stockholder webcast with CEO presentation immediately after May 13 Annual Meeting at 9:30am PT. Likely centerpiece content: IQ SST, FY2026 outlook, TPO safe-harbor pipeline, European recovery.</div>
+        <div class="link-row"><a href="https://investor.enphase.com/news-releases/news-release-details/enphase-energy-hold-2026-annual-meeting-stockholders-may-13-2026" target="_blank">Replay/details →</a></div>
       </div>
     </div>
 
     <!-- YOUTUBE -->
     <div class="section">
-      <h2><span class="icon">▶️</span> YouTube & Video Content</h2>
+      <h2>▶️ YouTube &amp; Video Content</h2>
       <div class="card neutral">
-        <div class="source">CEO Annual Meeting Presentation · May 13, 2026</div>
-        <div class="title"><a href="https://link.enphase.com/ENPHMeeting2026" target="_blank">Badri Kothandaraman 2026 Annual Meeting CEO Presentation</a></div>
-        <div class="excerpt">Live webcast yesterday at 9:30 AM PT. Archival video should be clipped into shorter explainer content for retail investor and installer audiences.</div>
+        <div class="source">Independent reviewers · OhmSnap, NuWatt, 8MSolar</div>
+        <div class="title">Multiple "IQ8 in 2026" review videos rate Enphase as industry standard</div>
+        <div class="excerpt">Independent video and written reviews from technical channels remain net-positive on IQ8 + ecosystem, citing 25-yr warranty and Sunlight Backup as differentiators. Consistent caveat: cost premium vs string + Powerwall combos for simple, unshaded roofs.</div>
+      </div>
+      <div class="no-data">No major analyst-led ENPH earnings call YouTube recaps surfaced today specific to AMER. The Q1 call replay remains the highest-engagement Enphase video content this week.</div>
+    </div>
+
+    <!-- INVESTOR -->
+    <div class="section">
+      <h2>📈 Investor &amp; Analyst Intelligence — AMER</h2>
+      <div class="card negative">
+        <div class="source">Ticker Report · May 12 roundup</div>
+        <div class="title">Morgan Stanley initiates with $27 PT; Barclays cuts to $30 <span class="badge negative">NEGATIVE</span></div>
+        <div class="excerpt">May 8: Morgan Stanley new $27 PT. May 4: Barclays $31 → $30 (Underweight maintained). May 4: Evercore new $37 PT. May 1: Weiss Ratings downgrades to "sell (d)." Cluster of post-Q1 cuts has pulled median consensus PT to ~$37.</div>
+        <div class="link-row"><a href="https://www.tickerreport.com/banking-finance/13438552/enphase-energy-enph-analysts-recent-ratings-updates.html" target="_blank">Full roundup →</a></div>
+      </div>
+      <div class="card positive">
+        <div class="source">Oppenheimer / Wells Fargo / Jefferies</div>
+        <div class="title">Buy-side bulls hold the line: $45-$57 targets <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">Oppenheimer Outperform $57 (cut from $68 but maintained rating). Wells Fargo Overweight $45 (cut from $50). Jefferies Buy $54. Goldman Sachs Buy $51 (Feb). Bull thesis: TPO backlog + IQ SST optionality + Europe recovery.</div>
+        <div class="link-row"><a href="https://stockanalysis.com/stocks/enph/ratings/" target="_blank">Ratings table →</a></div>
+      </div>
+      <div class="card positive">
+        <div class="source">Roth Capital · Philip Shen</div>
+        <div class="title">"IQ SST is one to watch for AI data center exposure" <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">Roth Capital MD/Sr. Research Analyst Philip Shen flagged ENPH as a solar stock providing data-center exposure post-IQ SST announcement. "Exciting and potentially meaningful in the coming years, but investors will need to be patient."</div>
+        <div class="link-row"><a href="https://pv-magazine-usa.com/2026/04/29/enphase-announces-distributed-solid-state-transformer-for-ai-data-centers-targets-2028-for-volume-deliveries/" target="_blank">PV Magazine →</a></div>
       </div>
       <div class="card neutral">
-        <div class="source">Independent reviewer ecosystem</div>
-        <div class="title">Third-party YouTube reviews continue to drive IQ8 / IQ Battery 5P consideration</div>
-        <div class="excerpt">Reviews on OhmSnap, 8MSolar, Heatable (UK) consistently rank IQ8 as the industry standard with 25-yr warranty. Opportunity to deepen creator partnerships in U.S. and EU markets.</div>
+        <div class="source">Simply Wall St · May 5</div>
+        <div class="title">Most popular ENPH narrative: 58% undervalued at $32.54 vs $76.86 fair value <span class="badge neutral">NEUTRAL</span></div>
+        <div class="excerpt">Crowd-sourced thesis assumes ENPH grows from $1.7B (FY24) to $4.5B by 2029 — 21% CAGR. Counter-narrative: Wood Mac forecasts US residential -18% in 2026; ENPH 2026 EPS consensus dropped to $2.16 from $2.50 90 days ago.</div>
+        <div class="link-row"><a href="https://finance.yahoo.com/markets/stocks/articles/assessing-enphase-energy-enph-valuation-151345940.html" target="_blank">Yahoo Finance →</a></div>
       </div>
     </div>
 
-    <!-- INVESTOR INTELLIGENCE -->
+    <!-- FACEBOOK -->
     <div class="section">
-      <h2><span class="icon">📈</span> Investor & Analyst Intelligence</h2>
-
-      <div class="card investor">
-        <div class="source">May 8, 2026 · Morgan Stanley</div>
-        <div class="title">Morgan Stanley sets ENPH price target at $27 <span class="badge negative">Bearish</span></div>
-        <div class="excerpt">Lowest Wall Street target on the books, signals deepening skepticism on near-term revenue growth and margin pressure from tariffs (4.3 ppt hit in Q1).</div>
-      </div>
-
-      <div class="card investor">
-        <div class="source">May 5, 2026 · StockTwits / Koyfin</div>
-        <div class="title"><a href="https://stocktwits.com/news-articles/markets/equity/enph-stock-wall-street-turns-cautious-after-q1-print-why-is-retail-still-bullish/cZQwqoTReB9" target="_blank">Wall Street avg PT now $40.41 vs retail "extremely bullish"</a> <span class="badge neutral">Mixed</span></div>
-        <div class="excerpt">26-analyst consensus: Hold, avg PT $41.03 (PriceTargets); Range $21.70 (GLJ) to $68 (Oppenheimer). Stock closed $32.54 May 4; YTD ~3.6% down. Retail price targets often $50–$100.</div>
-      </div>
-
-      <div class="card investor">
-        <div class="source">May 4, 2026 · Barclays</div>
-        <div class="title">Barclays cuts ENPH PT from $31 to $30, maintains Underweight <span class="badge negative">Bearish</span></div>
-        <div class="excerpt">Analyst Christine Cho cut FY26 revenue by ~2%, FY27 by ~2.5%, FY28 by ~4% citing lower expected microinverter shipments in U.S. and ROW.</div>
-      </div>
-
-      <div class="card investor">
-        <div class="source">May 4, 2026 · Evercore ISI</div>
-        <div class="title">Evercore lowers ENPH PT to $37 from $43, In Line <span class="badge negative">Bearish</span></div>
-        <div class="excerpt">Analyst Nicholas Amicucci. Acknowledges Q1 print but reduces near-term assumptions on TPO ramp timing.</div>
-      </div>
-
-      <div class="card investor">
-        <div class="source">April 29, 2026 · Multiple firms post-earnings</div>
-        <div class="title">Oppenheimer ($57, Outperform), Wells Fargo ($45, Overweight), TD Cowen ($35, Hold), JPMorgan ($35, Neutral), Citigroup ($31, Neutral) <span class="badge neutral">Mixed</span></div>
-        <div class="excerpt">Post-Q1 reassessment day. Buy-rated analysts trimmed but kept conviction; Hold-rated firms cut more meaningfully. Oppenheimer remains the most bullish target on the Street.</div>
-      </div>
-
-      <div class="card investor">
-        <div class="source">April 28, 2026 · Q1 2026 Earnings Release</div>
-        <div class="title"><a href="https://investor.enphase.com/news-releases/news-release-details/enphase-energy-reports-financial-results-first-quarter-2026" target="_blank">Enphase Q1 2026: $282.9M revenue, $83M free cash flow</a> <span class="badge negative">Below expectations</span></div>
-        <div class="excerpt">US sell-through down 48% QoQ post-25D; EU revenue up 36% QoQ. Channel inventory high — undershipping by $25M in Q2 to correct. Lowered U.S. battery list prices by 12-14% in March on lower reciprocal tariffs.</div>
-      </div>
-
-      <div class="card investor">
-        <div class="source">April 20, 2026 · Simply Wall St / Goldman Sachs</div>
-        <div class="title"><a href="https://simplywall.st/community/narratives/us/semiconductors/nasdaq-enph/enphase-energy/yox2ycp3" target="_blank">Goldman Sachs raised target; fair value recalibrated to $45.75</a> <span class="badge positive">Bullish</span></div>
-        <div class="excerpt">Reflects improved confidence in product roadmap (IQ SST, PPL) and channel partnerships. Discount rate moved to 11.75% from 11.21%.</div>
-      </div>
-
-      <div class="card investor">
-        <div class="source">Tax / Tariff developments · Q1 disclosure</div>
-        <div class="title">$50M IEEPA tariff refund claims submitted post-Feb 20 Supreme Court ruling <span class="badge positive">Positive</span></div>
-        <div class="excerpt">Refunds expected within 90–120 days. Material catalyst not yet in consensus. Same dynamic benefits SolarEdge ($55M potential).</div>
-      </div>
+      <h2>👥 Facebook &amp; Other Social</h2>
+      <div class="no-data">No high-signal Enphase activity on Facebook for AMER in today's scan. Most homeowner-facing community discussion has migrated to Reddit r/solar, DIY Solar Forum, and YouTube installer channels. Recommend continuing low-tempo presence; not a priority surface.</div>
     </div>
 
-    <!-- FACEBOOK & OTHER SOCIAL -->
+    <!-- INDUSTRY -->
     <div class="section">
-      <h2><span class="icon">👥</span> Facebook & Other Social</h2>
-      <div class="no-data">No new material Facebook or other-social activity meeting threshold today. Continue monitoring installer Facebook groups and homeowner solar communities.</div>
-    </div>
-
-    <!-- INDUSTRY NEWS -->
-    <div class="section">
-      <h2><span class="icon">☀️</span> Solar & Clean Energy Industry News <span class="section-label context">Market Context</span></h2>
-
-      <div class="card">
-        <div class="source">March 10, 2026 · SEIA / Wood Mackenzie</div>
-        <div class="title"><a href="https://seia.org/research-resources/solar-market-insight-report-2025-year-in-review" target="_blank">U.S. residential solar -19% forecast in 2026 after Section 25D expiration</a></div>
-        <div class="excerpt">2025 saw 4,647 MWdc residential (-2% YoY); Q4 was strongest quarter since 2023 driven by year-end 25D rush. TPO + safe-harbor activity expected to cushion 2026 decline and support 2027 recovery.</div>
+      <h2>☀️ US Solar &amp; Clean Energy Industry News <span class="section-label">Market Context</span></h2>
+      <div class="card policy">
+        <div class="source">SEIA / Wood Mackenzie · Q1 2026 Solar Market Insight</div>
+        <div class="title">US residential solar expected to contract 18-19% in 2026 post-25D expiration</div>
+        <div class="excerpt">2025 residential installations: 4,647 MWdc (-2% YoY). Forecast for 2026: -18% to -19% decline due to Section 25D expiration on Dec 31, 2025. Recovery in 2027 supported by TPO eligibility for 48E credit and safe-harboring activity. Section 48E for TPO valid through 2027 with 4-yr safe-harbor window for projects starting construction before July 4, 2026.</div>
+        <div class="link-row"><a href="https://seia.org/research-resources/solar-market-insight-report-2025-year-in-review" target="_blank">SEIA report →</a></div>
       </div>
-
-      <div class="card">
-        <div class="source">March 12, 2026 · Wood Mackenzie</div>
-        <div class="title"><a href="https://www.woodmac.com/news/opinion/the-us-solar-industry-navigated-unprecedented-change-in-20253" target="_blank">U.S. residential inverter market: Enphase 31.7%, SolarEdge 31.3%, Tesla 29.6% in 2025</a></div>
-        <div class="excerpt">Tesla's share more than doubled in 2025 (+16.5 ppts); SolarEdge gained quarterly leadership in Q2 for first time in nearly 5 years. Enphase lost SunPower business.</div>
+      <div class="card policy">
+        <div class="source">EnergySage Marketplace · Feb 2026</div>
+        <div class="title">Battery attachment fell to 38% in H2 2025; CA/TX retrofit opportunity opens</div>
+        <div class="excerpt">CA attachment 79% → 71%; TX 61% → 53%; Hawaii 100% → 85%. Interest only marginally lower (74% → 73%) — homeowners deferred storage to capture solar incentives. "Thousands of new solar households are now prime candidates for storage retrofits." EnergySage director Emily Walker.</div>
+        <div class="link-row"><a href="http://www.prnewswire.com/news-releases/energysage-marketplace-report-shows-incentive-expiration-triggered-historic-shift-in-home-energy-market-302697516.html" target="_blank">EnergySage →</a></div>
       </div>
-
-      <div class="card">
-        <div class="source">April 29, 2026 · Wood Mackenzie</div>
-        <div class="title"><a href="https://www.woodmac.com/reports/power-markets-us-residential-solar-finance-update-h1-2026-150463127/" target="_blank">U.S. residential solar finance shifting rapidly to TPO and prepaid leases</a></div>
-        <div class="excerpt">Freedom Forever bankruptcy in Q1 2026 reshaped competitive landscape. Reinforces strategic importance of Enphase's TPO partnerships and "Power-Per-Lease" (PPL) initiative.</div>
+      <div class="card policy">
+        <div class="source">Wood Mackenzie · April 2026</div>
+        <div class="title">TPO share to hit 69% of US residential in 2026 — directly favorable to Enphase strategy</div>
+        <div class="excerpt">TPO providers (Sunrun, Palmetto, GoodLeap, Lightreach) can still claim the commercial 48E investment tax credit through 2027. Customer acquisition costs spiking 40% to $0.84/W. Market consolidating around prepaid-lease structures. Aurora Solar 2026 Snapshot: 68% of homeowners pulled their installs forward to beat 25D.</div>
+        <div class="link-row"><a href="https://payaca.com/us/blog/us-solar-demand-2026-where-installers-should-focus" target="_blank">Payaca →</a> &nbsp;|&nbsp; <a href="https://www.surgepv.com/blog/us-residential-solar-market-trends-2026" target="_blank">SurgePV trends →</a></div>
       </div>
-
-      <div class="card">
-        <div class="source">February 26, 2026 · EnergySage</div>
-        <div class="title"><a href="https://www.solarpowerworldonline.com/2026/02/energysage-report-shows-rush-to-install-resi-solar-systems-before-end-of-itc/" target="_blank">EnergySage: 205% YoY increase in homeowner activity in H2 2025 before ITC expired</a></div>
-        <div class="excerpt">Most installers reached annual capacity by October 2025. Panel wattage shifted lower as installers prioritized available inventory. Solar prices rose just 0.4%, storage prices +3.6% — marketplace transparency limited pricing power.</div>
-      </div>
-
-      <div class="card">
-        <div class="source">March 13, 2026 · Aurora Solar</div>
-        <div class="title"><a href="https://aurorasolar.com/resources/2026-aurora-solar-snapshot" target="_blank">2026 Aurora Snapshot: 49% of interested homeowners can't afford solar without 25D</a></div>
-        <div class="excerpt">63% of installers expect OBBB tax credit repeal to negatively impact their business; 68% of recent buyers moved timeline forward to beat 25D deadline. TPO/PPL pricing structure becomes industry's primary path to homeowner affordability.</div>
+      <div class="card policy">
+        <div class="source">Supreme Court / Mercom · Q1 2026</div>
+        <div class="title">Supreme Court invalidated IEEPA tariffs — Enphase filed ~$50M in refund claims</div>
+        <div class="excerpt">Refund timing 90-120 days post-filing. Both Enphase ($50M) and SolarEdge (potential ~$55M) flagged refund recoveries on Q1 calls — not yet baked into guidance. Material tailwind to H2 2026 cash flow.</div>
+        <div class="link-row"><a href="https://www.mercomindia.com/weather-financing-challenges-weigh-on-enphases-weak-start-to-2026" target="_blank">Mercom →</a></div>
       </div>
     </div>
 
     <!-- GAP ANALYSIS -->
     <div class="section">
-      <h2><span class="icon">🔍</span> White Space & Gap Analysis <span class="section-label strategic">Strategic</span></h2>
-      <p class="section-subtitle">5+ distinct gap types identified from today's intelligence</p>
+      <h2>🔍 White Space &amp; Gap Analysis — AMER <span class="section-label">Strategic</span></h2>
       <div class="gap-grid">
-
         <div class="gap-item">
-          <div class="gap-type">🟡 Coverage Gap</div>
-          <div class="gap-title">Reddit footprint trails industry peers</div>
-          <div class="gap-desc">ENPH Reddit mentions in 1st percentile vs. peers (AltIndex). Tesla and SolarEdge dominate r/solar and r/RenewableEnergy conversation. Consider Enphase-sponsored AMAs and installer engagement programs.</div>
+          <div class="gap-type">Coverage Gap</div>
+          <div class="gap-title">No first-party Enphase voice on Reddit</div>
+          <div class="gap-desc">ENPH ranks in the 1st percentile of ticker mentions vs peers. r/Enphase and r/solar host real-time installer + homeowner debate every day with zero verified Enphase participation. Tesla and SolarEdge both have unofficial but very active community presences.</div>
         </div>
-
         <div class="gap-item">
-          <div class="gap-type">🔴 Sentiment Gap</div>
-          <div class="gap-title">Sunlight Backup unaddressed installer complaints</div>
-          <div class="gap-desc">Installer pros on re-wrenches actively steer customers away from Sunlight Backup configurations. 64A PV hard limit, two-load-controller complexity, and "useless without battery" framing dominate the narrative. No Enphase content addressing the limitations + best-fit guidance.</div>
+          <div class="gap-type">Sentiment Gap</div>
+          <div class="gap-title">"Enphase is too expensive" objection is unanswered</div>
+          <div class="gap-desc">In active forum threads, the price premium vs Tesla PW3 and Hoymiles is the #1 reason installers steer customers away. Enphase has the data (25-yr warranty + retrofit simplicity + Sunlight Backup) to defend the premium, but the content arming installers is fragmented.</div>
         </div>
-
         <div class="gap-item">
-          <div class="gap-type">🟠 Content Gap</div>
-          <div class="gap-title">No first-party content on AI data center / IQ SST</div>
-          <div class="gap-desc">IQ SST is potentially the single largest TAM-expansion story in Enphase's history (11 GW by 2031). Currently only a press release and white paper. Missing: explainer video, engineering deep-dive, hyperscaler interview series.</div>
+          <div class="gap-type">Content Gap</div>
+          <div class="gap-title">No mainstream coverage of IQ SST AI story</div>
+          <div class="gap-desc">Roth Capital + PV Magazine covered it; Bloomberg, WSJ, CNBC, The Information have not. "Solar company powers AI data centers" is a tier-1 narrative. Earned media + IR roadshow needed.</div>
         </div>
-
         <div class="gap-item">
-          <div class="gap-type">🟣 Competitive Gap</div>
-          <div class="gap-title">Balcony / plug-in solar category ceded entirely</div>
-          <div class="gap-desc">APsystems and Hoymiles aggressively own the balcony/DIY plug-in microinverter category in EU and US. Enphase has no presence. First-time solar buyers form brand loyalty here before going rooftop.</div>
+          <div class="gap-type">Competitive Gap</div>
+          <div class="gap-title">SolarEdge owns the "comeback story" narrative</div>
+          <div class="gap-desc">SEDG +46% YoY, Nexis launch, AI data-center pivot, "shift from defense to offense" — Shuki Nir is owning the turnaround narrative in trade press. Enphase's $873.7M TPO backlog is a stronger fact pattern but is being out-told.</div>
         </div>
-
         <div class="gap-item">
-          <div class="gap-type">🔵 Opportunity Gap</div>
-          <div class="gap-title">SMA Australian residential retreat creates installer vacuum</div>
-          <div class="gap-desc">SMA's announced exit (May 6) from AUS residential leaves a premium-installer audience looking for an alternative. Enphase's IQ Battery 5P + FlexPhase + Evergen/Amber VPP is the natural replacement, but no targeted campaign in market.</div>
+          <div class="gap-type">Competitive Gap</div>
+          <div class="gap-title">Plug-in / balcony solar is going to Hoymiles + APsystems</div>
+          <div class="gap-desc">APsystems EZ1 direct sales + Hoymiles HiFlow are owning the entry-level US (and global) plug-in segment. Enphase has the German Balcony Solar System but no equivalent US DTC product, and no balcony-friendly form factor.</div>
         </div>
-
         <div class="gap-item">
-          <div class="gap-type">🔴 Sentiment Gap</div>
-          <div class="gap-title">"Enphase locks you in" perception in DIY community</div>
-          <div class="gap-desc">Persistent thread theme: IQ Gateway, System Controller costs, and ecosystem requirements are a barrier. Enphase rarely engages this audience publicly — opportunity for a transparent "what you can and can't do off-label" content piece.</div>
-        </div>
-
-        <div class="gap-item">
-          <div class="gap-type">🟣 Competitive Gap</div>
-          <div class="gap-title">Tesla Powerwall 3 search/SEO dominance</div>
-          <div class="gap-desc">Most "best home battery 2026" content positions Powerwall 3 as default, Enphase as alternative. Enphase's 15-yr warranty + modular AC-coupling story is underrepresented in comparison content.</div>
+          <div class="gap-type">Opportunity Gap</div>
+          <div class="gap-title">Storage retrofit wave from 2025 25D cohort</div>
+          <div class="gap-desc">EnergySage explicitly flags the H2 2025 surge as creating "thousands of new solar households… prime candidates for storage retrofits." Enphase IQ Battery 5P AC-coupling is the easiest retrofit path. Marketing investment in this segment is currently insufficient relative to the opportunity.</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- =========================== EU TAB =========================== -->
-  <div class="tab-content" id="eu">
+  <!-- ============= EU PANEL ============= -->
+  <div class="region-panel" id="panel-eu">
 
-    <!-- ACTION BOARD -->
     <div class="action-board">
       <h2>🎯 Priority Action Board — EU</h2>
-      <p class="subtitle">Marketing & Comms actions ranked by urgency for European markets</p>
+      <p class="subtitle">Europe is Enphase's only growing region this quarter. Action board calibrated to that momentum.</p>
       <div class="action-columns">
         <div class="action-col urgent">
-          <h3>🔴 Urgent — Today/Tomorrow</h3>
+          <h3>🔴 Urgent — Today / Tomorrow</h3>
           <div class="action-card urgent">
-            <div class="act-title">Capitalize on +36% EU revenue growth</div>
-            <div class="act-why">Q1 EU revenue grew 36% QoQ vs U.S. -23%. Build a B2B narrative around Enphase Europe as the growth engine — counterbalances the U.S. narrative dominating Wall Street coverage.</div>
-            <div class="act-meta"><span>Press release</span><span>EU LinkedIn</span><span>Owner: EMEA Comms</span></div>
+            <div class="act-title">Pre-empt Tesla Powerwall 3P in DACH</div>
+            <div class="act-why">Tesla launched Powerwall 3P from Gigafactory Berlin April 23. Direct three-phase competition with IQ Battery 5P FlexPhase. PV Europe and PV Magazine have given it heavy editorial coverage with no Enphase counter-narrative.</div>
+            <div class="act-meta"><span class="fmt">Side-by-side comparison + press tour</span><span class="plat">DE/AT/CH trade press</span><span class="own">EU Product Marketing</span></div>
           </div>
           <div class="action-card urgent">
-            <div class="act-title">Position vs. SMA Solar resi commoditization narrative</div>
-            <div class="act-why">SMA's Q1 (May 13) blames Chinese commoditization for HBS pressure even as +27% YoY. Enphase needs to claim premium-installer trust story in Germany, NL, UK.</div>
-            <div class="act-meta"><span>Comparative content</span><span>Country sites</span><span>Owner: EU PMM</span></div>
+            <div class="act-title">Amplify Ensol Subscription as Replicable Model</div>
+            <div class="act-why">€30/month Ensol battery subscription with VPP participation through RTE is a model for the entire EU upfront-cost barrier problem. Position as exportable to NL, ES, IT.</div>
+            <div class="act-meta"><span class="fmt">Case study + investor day prep</span><span class="plat">LinkedIn + earned</span><span class="own">Comms + IR</span></div>
           </div>
         </div>
-
         <div class="action-col week">
           <h3>🟡 This Week</h3>
           <div class="action-card week">
-            <div class="act-title">PowerMatch follow-through campaign</div>
-            <div class="act-why">PowerMatch launched Dec 2025; OTA update extends usable battery energy + life. Half-year measurable user data should now be available — turn into case studies for installers and homeowners in DE/NL/FR.</div>
-            <div class="act-meta"><span>Case study</span><span>Enphase EU sites</span><span>Owner: EU PMM</span></div>
+            <div class="act-title">Tell the "+36% QoQ Europe" Story</div>
+            <div class="act-why">EU revenue grew 36% QoQ in Q1 2026 per CEO. This stat is buried in the earnings transcript; it's the strongest counter-narrative to the ENPH bear thesis. Build a campaign around it.</div>
+            <div class="act-meta"><span class="fmt">Investor blog + LinkedIn</span><span class="plat">EU country LinkedIn + IR</span><span class="own">Investor Relations</span></div>
           </div>
           <div class="action-card week">
-            <div class="act-title">Iran-war energy security narrative</div>
-            <div class="act-why">SMA reports surging EU rooftop demand since late February. Position IQ Battery 5P + FlexPhase as the resilience play for households worried about energy independence.</div>
-            <div class="act-meta"><span>Paid social + email</span><span>DE / NL / UK</span><span>Owner: EU Comms</span></div>
+            <div class="act-title">Defend NL Dynamic Tariff Story Pre-NEM-Exit</div>
+            <div class="act-why">Dutch government proposing to end NEM in 2027. Enphase NextEnergy collaboration + dynamic-tariff white paper shows payback &lt; 6 yrs even without NEM. Get this in front of every NL homeowner this season.</div>
+            <div class="act-meta"><span class="fmt">Dutch-language video + calculator</span><span class="plat">Enphase.com/NL + NL solar press</span><span class="own">EU Product Marketing</span></div>
           </div>
           <div class="action-card week">
-            <div class="act-title">Expand EU VPP partner roster</div>
-            <div class="act-why">10x growth in VPP-participating systems in EU last year (NextEnergy NL, LichtBlick DE). Localize partner case studies for FR/BE/ES.</div>
-            <div class="act-meta"><span>Partner co-marketing</span><span>Country sites + LinkedIn</span><span>Owner: EU Sales</span></div>
+            <div class="act-title">In-Person Battery Adoption Events (FR/NL)</div>
+            <div class="act-why">Enphase committed to "hundreds of in-person events" in 2026 for FR + NL solar-only homeowners. Operationalize cadence + conversion measurement now to feed Q3 reporting.</div>
+            <div class="act-meta"><span class="fmt">Field marketing program</span><span class="plat">In-person + local digital</span><span class="own">Field Marketing</span></div>
           </div>
         </div>
-
         <div class="action-col ongoing">
           <h3>🟢 Ongoing</h3>
           <div class="action-card ongoing">
-            <div class="act-title">FlexPhase three-phase storytelling</div>
-            <div class="act-why">IQ Battery 5P with FlexPhase supports both 1-phase and 3-phase in ES/PT/FR/SE/DK/BE/NL/DE/AT/CH/PL/LU. Continue installer-focused content on three-phase backup capability.</div>
-            <div class="act-meta"><span>Installer content</span><span>EU country sites</span><span>Owner: EU PMM</span></div>
+            <div class="act-title">Lean into German Balcony Solar Category</div>
+            <div class="act-why">German Balcony Solar Plug &amp; Play is uniquely positioned for the EU plug-in market; Hoymiles HiFlow + APsystems EZ1 are encroaching. Sustain DE awareness drumbeat.</div>
+            <div class="act-meta"><span class="fmt">Always-on social</span><span class="plat">German Instagram + YouTube</span><span class="own">EU Social Team</span></div>
           </div>
           <div class="action-card ongoing">
-            <div class="act-title">Solar curtailment as a feature</div>
-            <div class="act-why">EU VPP API now supports remote solar curtailment — being used in NL and BE for grid stability and to mitigate negative-price events. Turn into a thought-leadership series for grid operators.</div>
-            <div class="act-meta"><span>Whitepaper / podcast</span><span>LinkedIn EU</span><span>Owner: EU Comms</span></div>
+            <div class="act-title">5th-Gen Battery Tease in Q4</div>
+            <div class="act-why">Management said fifth-generation battery launches in Europe in Q4 2026 with 50% higher density / ~40% lower cost. Build expectation drumbeat starting Q3 to maximize launch impact.</div>
+            <div class="act-meta"><span class="fmt">Product teaser series</span><span class="plat">Trade press + LinkedIn</span><span class="own">Product Marketing</span></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- KEY TAKEAWAYS EU -->
     <div class="section">
-      <h2><span class="icon">⚡</span> Today's Key Takeaways — EU</h2>
+      <h2>⚡ Today's Key Takeaways — EU</h2>
       <ul class="takeaway-list">
-        <li class="urgent">EU revenue grew <strong>+36% QoQ in Q1 2026</strong> — Europe is the bright spot offsetting U.S. post-25D weakness.</li>
-        <li>SMA Solar Q1 (May 13): HBS division <strong>+27% YoY</strong> on EU rooftop demand surge tied to energy-security concerns; €1.475–1.675B 2026 guidance upper-third revision.</li>
-        <li>Hoymiles launched HiFlow / HiFlow Pro plug-in microinverters (April 7) targeting balcony solar across Europe — category Enphase does not address.</li>
-        <li>Enphase's <strong>PowerMatch™</strong> technology launched in Europe (Dec 2025) — intelligent battery output matching live now in EU markets.</li>
-        <li>VPP-participating Enphase systems grew <strong>10x YoY</strong> across EU; expanding integrations with NextEnergy (NL), LichtBlick (DE).</li>
+        <li class="urgent"><strong>Tesla Powerwall 3P now shipping in Germany</strong> as of April 23, 2026 — first head-on three-phase competition with IQ Battery 5P FlexPhase. Trade press coverage has been one-sided.</li>
+        <li><strong>Europe revenue +36% QoQ in Q1 2026</strong> is the most under-leveraged stat in the Enphase story. CEO called out "early signs of improvement in April" with solar and battery adoption rising across European markets.</li>
+        <li><strong>Ensol €30/month battery subscription</strong> with VPP-share via RTE is a structural answer to EU upfront cost barriers — replicable beyond France.</li>
+        <li><strong>SMA Solar HBS division collapsed</strong> with revenue -30% YoY and a €375.6M EBIT loss. Largest German residential incumbent is wounded; Enphase has runway to take share.</li>
+        <li><strong>NL government still pushing NEM termination to 2027</strong>; Enphase data shows payback &lt; 6 yrs with solar+battery+dynamic tariff. Sales narrative shift required.</li>
       </ul>
     </div>
 
-    <!-- COMPETITOR ANALYSIS EU -->
     <div class="section">
-      <h2><span class="icon">⚔️</span> Competitor Analysis — EU</h2>
+      <h2>🟠 Reddit &amp; Installer Forum Intelligence — EU</h2>
+      <div class="sentiment-summary">
+        <div class="sent-box pos"><div class="count">1</div><div class="lbl">✅ Positive</div></div>
+        <div class="sent-box neg"><div class="count">1</div><div class="lbl">❌ Negative</div></div>
+        <div class="sent-box neu"><div class="count">1</div><div class="lbl">⚪ Neutral</div></div>
+      </div>
+      <div class="card positive">
+        <div class="source">Heatable.co.uk (UK reseller) · Apr 29 review</div>
+        <div class="title">"Excellent customer service (rated 5/5)… 25-year warranty" <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">UK-market review of IQ8 series highlights premium positioning, FlexPhase launch, and IQ Energy Router integration. Notes IQ7 series fully discontinued in 2024 and IQ8 available across UK in early 2025.</div>
+        <div class="link-row"><a href="https://heatable.co.uk/solar/advice/enphase-microinverter-review" target="_blank">View review →</a></div>
+      </div>
+      <div class="card negative">
+        <div class="source">Dutch / NL homeowner forums + Enphase white paper</div>
+        <div class="title">NEM termination fear pulling NL solar market off the rails <span class="badge negative">NEGATIVE</span></div>
+        <div class="excerpt">"The Dutch solar market has been in turmoil for almost 2 years now. It has increased and decreased by up to 60%." Export penalties and political uncertainty creating cyclical buyer hesitation. Enphase's own white paper acknowledges the disruption.</div>
+        <div class="link-row"><a href="https://enphase.com/download/presentation-netherlands" target="_blank">NL white paper →</a></div>
+      </div>
+      <div class="card neutral">
+        <div class="source">DIY Solar Forum · EU AC-coupling threads</div>
+        <div class="title">European homeowners exploring EG4/Sol-Ark + IQ7/8 combinations <span class="badge neutral">NEUTRAL</span></div>
+        <div class="excerpt">Active threads from FR/DE/NL homeowners attempting hybrid setups confirm: when Enphase ecosystem is too expensive, customers shop alternatives. Reinforces the price-premium narrative gap.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>⚔️ Competitor Analysis — EU <span class="section-label">Market Intelligence</span></h2>
       <table class="comp-table">
         <thead>
-          <tr><th>Competitor</th><th>EU Activity</th><th>Threat</th><th>Implication for Enphase EU</th></tr>
+          <tr><th>Competitor</th><th>EU Move</th><th>Threat</th><th>Enphase Counter</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>SolarEdge</strong></td>
-            <td>Q1 Europe rev $114M (+14% QoQ); Nexis launched DE (March 2026); Q2 EU Nexis fully booked</td>
-            <td class="threat-high">🔴 HIGH</td>
-            <td>SolarEdge's EU momentum directly threatens Enphase's premium installer base in Germany and France</td>
-          </tr>
-          <tr>
-            <td><strong>SMA Solar</strong></td>
-            <td>Q1 HBS +27% YoY (€61.4M); pivoting to grid-forming utility-scale; doubling Chinese-commoditization rhetoric</td>
-            <td class="threat-low">🟢 LOW</td>
-            <td>SMA softening on resi creates upgrade-path opportunity for Enphase IQ Battery 5P + FlexPhase</td>
+            <td><strong>Tesla Powerwall 3P</strong></td>
+            <td>Single-box three-phase 13.5 kWh / 15.4 kW launched DE Apr 23; expanding EU</td>
+            <td class="threat-high">HIGH</td>
+            <td>IQ Battery 5P FlexPhase + Sunlight Jump Start uniquely flexible; emphasize modular scaling 5-70 kWh</td>
           </tr>
           <tr>
             <td><strong>Hoymiles</strong></td>
-            <td>HiFlow + HiFlow Pro launched April 7 for EU balcony solar; hybrid micro-storage product June 2026</td>
-            <td class="threat-med">🟡 MEDIUM</td>
-            <td>Building EU balcony category brand affinity Enphase doesn't compete for</td>
+            <td>HiFlow / HiFlow Pro plug-in EU launch; hybrid micro-storage June 2026</td>
+            <td class="threat-med">MEDIUM</td>
+            <td>Enphase Balcony Solar System is a defensible incumbent in DE; defend share</td>
+          </tr>
+          <tr>
+            <td><strong>SolarEdge</strong></td>
+            <td>EU revenue +14% QoQ; Nexis Q2 fully booked for Europe</td>
+            <td class="threat-high">HIGH</td>
+            <td>Lead with retrofit advantage + 25-yr microinverter warranty vs SEDG inverter swap risk</td>
+          </tr>
+          <tr>
+            <td><strong>SMA Solar</strong></td>
+            <td>2025 collapse in HBS (-30%); Sunny Boy Smart Energy 5.0 took 2026 SPI test award in DACH</td>
+            <td class="threat-low">LOW (financial)</td>
+            <td>Take share from wounded incumbent via FlexPhase + installer recruitment in DE/AT/CH</td>
           </tr>
           <tr>
             <td><strong>APsystems</strong></td>
-            <td>QS2 quad microinverter (Oct 2025) gaining traction in NL/DE; 25-yr warranty extension</td>
-            <td class="threat-med">🟡 MEDIUM</td>
-            <td>Direct competition in residential rooftop on price-performance</td>
+            <td>QS2 quad microinverter shipping EU via distributors; 25-yr extendable warranty</td>
+            <td class="threat-med">MEDIUM</td>
+            <td>Independent MPPT positioning is the only feature where APsystems matches Enphase per-panel value prop</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>🐦 Twitter / X + 💼 LinkedIn — EU</h2>
+      <div class="card positive">
+        <div class="source">Enphase Newsroom · March 16</div>
+        <div class="title">Ensol partnership press release amplified across French solar LinkedIn <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">€30/month subscription model with monitoring + maintenance + 15-yr warranty + RTE VPP participation. Strong installer reaction in French trade press.</div>
+        <div class="link-row"><a href="https://newsroom.enphase.com/news-releases/news-release-details/enphase-energy-and-ensol-partner-expand-home-battery-adoption" target="_blank">Press release →</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📣 Marketing Collateral + Industry News — EU</h2>
+      <div class="card">
+        <div class="source">Mercom India · May 4</div>
+        <div class="title">Europe identified as Enphase's bright spot in otherwise weak Q1</div>
+        <div class="excerpt">"Enphase's revenue in Europe increased by 36% compared to Q4 2025… beginning to see early signs of improvement in April, with solar and battery adoption increasing across European markets compared with Q1 monthly averages."</div>
+        <div class="link-row"><a href="https://www.mercomindia.com/weather-financing-challenges-weigh-on-enphases-weak-start-to-2026" target="_blank">Mercom →</a></div>
+      </div>
+      <div class="card policy">
+        <div class="source">SMA Solar · 2026 guidance</div>
+        <div class="title">SMA HBS expected sales growth + improved earnings — but no break-even yet</div>
+        <div class="excerpt">SMA CFO: "We are anticipating sales growth and improved earnings for the HBS division. However, we will not yet reach the break-even point in the HBS division this fiscal year." Confirms the European residential market is recovering but slowly. Tailwind for Enphase share-take.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🔍 White Space &amp; Gap Analysis — EU <span class="section-label">Strategic</span></h2>
+      <div class="gap-grid">
+        <div class="gap-item">
+          <div class="gap-type">Coverage Gap</div>
+          <div class="gap-title">No Enphase voice in German PV blog/forum scene</div>
+          <div class="gap-desc">photovoltaikforum.com, PVMagazine DE, and DACH Stromspeicher inspection reports drive German installer decisions. Enphase has limited authorship presence vs SMA, KOSTAL, Fronius — local incumbents who participate heavily.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gap-type">Sentiment Gap</div>
+          <div class="gap-title">NEM-fear is suppressing NL battery attachment</div>
+          <div class="gap-desc">Despite Enphase's own data showing post-NEM payback &lt; 6 years with battery + dynamic tariff, the homeowner-facing narrative is dominated by "is solar still worth it?" Dutch-language video and consumer comparison content is thin.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gap-type">Content Gap</div>
+          <div class="gap-title">Subscription/leasing model story not yet told beyond France</div>
+          <div class="gap-desc">Ensol's €30/month VPP-share model is replicable in NL, ES, IT, DE — but no follow-on case studies have been published. First-mover comms advantage available.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gap-type">Competitive Gap</div>
+          <div class="gap-title">Tesla Powerwall 3P EU launch coverage is one-sided</div>
+          <div class="gap-desc">PV Europe + Electrek + Basenor all covered the 3P launch with no Enphase counter-positioning. Tesla owns the three-phase narrative right now even though Enphase shipped FlexPhase first.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gap-type">Opportunity Gap</div>
+          <div class="gap-title">SMA HBS weakness opens DACH installer recruitment window</div>
+          <div class="gap-desc">SMA HBS lost €376M in 2025 with 30% revenue contraction; installers will be looking to diversify partner brands. Targeted Enphase Installer Network recruitment in DE/AT/CH is high-leverage right now.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= APAC PANEL ============= -->
+  <div class="region-panel" id="panel-apac">
+
+    <div class="action-board">
+      <h2>🎯 Priority Action Board — APAC</h2>
+      <p class="subtitle">Australia/NZ-led growth via Evergen + Amber + Cheaper Home Batteries; India dominated by Hoymiles' 360 MW deal.</p>
+      <div class="action-columns">
+        <div class="action-col urgent">
+          <h3>🔴 Urgent — Today / Tomorrow</h3>
+          <div class="action-card urgent">
+            <div class="act-title">Lock In Cheaper Home Batteries May 1 Compliance Story</div>
+            <div class="act-why">Australia's federal Cheaper Home Batteries Program now requires VPP-capable batteries as of May 1, 2026. Enphase IQ Battery 5P + Evergen integration is compliant — communicate this aggressively to installers before competitors close the gap.</div>
+            <div class="act-meta"><span class="fmt">Installer alert + how-to webinar</span><span class="plat">Enphase Installer Network AU</span><span class="own">APAC Channel Marketing</span></div>
+          </div>
+          <div class="action-card urgent">
+            <div class="act-title">Counter Hoymiles 360 MW India Narrative</div>
+            <div class="act-why">Hoymiles signed the largest microinverter deal in Indian history (Kosol Energie, 360 MW) in January. Enphase has no comparable India announcement. Even a smaller anchor deal would reset the regional narrative.</div>
+            <div class="act-meta"><span class="fmt">PR + business development</span><span class="plat">Indian trade press</span><span class="own">India BD + PR</span></div>
+          </div>
+        </div>
+        <div class="action-col week">
+          <h3>🟡 This Week</h3>
+          <div class="action-card week">
+            <div class="act-title">Promote 65 VPP Programs / 8 Countries Stat</div>
+            <div class="act-why">Buried in Evergen press release: Enphase grid-services platform spans 65+ VPP programs across 8 countries. This is a defensible #1 position vs Tesla and SolarEdge. Lead with it.</div>
+            <div class="act-meta"><span class="fmt">Investor + trade content</span><span class="plat">LinkedIn + IR site</span><span class="own">Comms + IR</span></div>
+          </div>
+          <div class="action-card week">
+            <div class="act-title">IQ Energy Management AU/NZ Adoption Push</div>
+            <div class="act-why">Launched March 26 with variable-tariff support for AU/NZ third-party EV chargers and water heaters. Awareness still limited beyond early adopters; trade press coverage thin.</div>
+            <div class="act-meta"><span class="fmt">Installer training + earned media</span><span class="plat">Solar Quotes, RenewEconomy</span><span class="own">APAC Product Marketing</span></div>
+          </div>
+        </div>
+        <div class="action-col ongoing">
+          <h3>🟢 Ongoing</h3>
+          <div class="action-card ongoing">
+            <div class="act-title">Build Amber Electric + Evergen Co-Marketing Drumbeat</div>
+            <div class="act-why">Two AU VPP partnerships announced in 2 months. Co-marketing assets (case studies, joint webinars) sustain mindshare in a market where Tesla Powerwall has dominant share.</div>
+            <div class="act-meta"><span class="fmt">Co-branded content series</span><span class="plat">AU LinkedIn + retailer email</span><span class="own">APAC Partner Marketing</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>⚡ Today's Key Takeaways — APAC</h2>
+      <ul class="takeaway-list">
+        <li class="urgent"><strong>Cheaper Home Batteries Program requires VPP-capable batteries from May 1, 2026</strong> — Enphase + Evergen integration just became table-stakes. Installers need updated talk tracks today.</li>
+        <li><strong>Hoymiles signed India's largest-ever microinverter deal</strong> (360 MW with Kosol Energie). Enphase has no equivalent India anchor — competitive gap forming in the world's fastest-growing solar market.</li>
+        <li><strong>Enphase already runs 65+ VPP programs across 8 countries</strong> — this is the strongest, most under-marketed competitive moat in the company's portfolio. Lead with it.</li>
+        <li><strong>IQ Energy Management for AU/NZ launched March 26</strong> integrating variable tariffs, third-party EV chargers, and water heaters — the most complete home-energy software stack in the region.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🟠 Reddit &amp; Installer Forum Intelligence — APAC</h2>
+      <div class="sentiment-summary">
+        <div class="sent-box pos"><div class="count">1</div><div class="lbl">✅ Positive</div></div>
+        <div class="sent-box neg"><div class="count">0</div><div class="lbl">❌ Negative</div></div>
+        <div class="sent-box neu"><div class="count">2</div><div class="lbl">⚪ Neutral</div></div>
+      </div>
+      <div class="card positive">
+        <div class="source">Green Review AU · April 24</div>
+        <div class="title">Evergen tie-up positions Enphase IQ Batteries as "revenue stream" for AU homeowners <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">Marco Krapels, Enphase SVP global energy markets and CMO: "Australia continues to lead the world in home energy innovation… we can help accelerate battery adoption and deliver a better energy experience for our customers."</div>
+        <div class="link-row"><a href="https://greenreview.com.au/business_insight/enphase-energy-and-evergen-form-partnership-to-accelerate-virtual-power-plants/" target="_blank">Green Review →</a></div>
+      </div>
+      <div class="card neutral">
+        <div class="source">Solar Quotes AU + AU homeowner forums</div>
+        <div class="title">AU homeowners actively comparing Enphase vs Tesla vs Sonnen vs SolarEdge VPP options <span class="badge neutral">NEUTRAL</span></div>
+        <div class="excerpt">High purchase-intent discussion is dominated by Powerwall in AU; Enphase mentioned alongside Sonnen as "premium alternative" but installer push is mostly toward Tesla for cost reasons.</div>
+      </div>
+      <div class="card neutral">
+        <div class="source">Hoymiles India PR + LinkedIn</div>
+        <div class="title">India installer LinkedIn celebrating Hoymiles 360 MW Kosol deal <span class="badge neutral">NEUTRAL</span></div>
+        <div class="excerpt">Indian solar LinkedIn community framing Hoymiles deal as legitimizing microinverter technology for utility-scale rooftop. Enphase brand has limited India recognition outside of premium residential.</div>
+        <div class="link-row"><a href="https://www.prnewswire.com/apac/news-releases/hoymiles-secures-indias-largest-ever-microinverter-deal-with-kosol-energie-totaling-360-mw-302672014.html" target="_blank">Hoymiles release →</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>⚔️ Competitor Analysis — APAC <span class="section-label">Market Intelligence</span></h2>
+      <table class="comp-table">
+        <thead>
+          <tr><th>Competitor</th><th>APAC Move</th><th>Threat</th><th>Enphase Counter</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tesla Powerwall 3</strong></td>
+            <td>Dominant AU residential storage share; expanding NZ; integrated inverter advantage</td>
+            <td class="threat-high">HIGH</td>
+            <td>Lead with VPP optionality across 65+ programs + 15-yr warranty</td>
+          </tr>
+          <tr>
+            <td><strong>Hoymiles</strong></td>
+            <td>360 MW Kosol India deal; established in India + Brazil; aggressive multi-region expansion</td>
+            <td class="threat-high">HIGH (India)</td>
+            <td>India anchor partnership needed; emphasize US-manufactured DOM SKUs for premium customers</td>
+          </tr>
+          <tr>
+            <td><strong>Sonnen</strong></td>
+            <td>Premium AU/NZ presence; sonnenCommunity VPP</td>
+            <td class="threat-med">MEDIUM</td>
+            <td>Microinverter + battery ecosystem integration is unmatched</td>
+          </tr>
+          <tr>
+            <td><strong>SolarEdge</strong></td>
+            <td>International revenues +5% QoQ in Q1 2026; AU presence growing</td>
+            <td class="threat-med">MEDIUM</td>
+            <td>Defend retrofit advantage; SEDG inverter swap risk story applies in AU as well</td>
+          </tr>
+          <tr>
+            <td><strong>APsystems</strong></td>
+            <td>Strong APAC distribution; QS2 launches expanding regional presence</td>
+            <td class="threat-low">LOW (premium segment)</td>
+            <td>APsystems competes on price; Enphase wins on warranty + brand trust</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card competitor">
+        <div class="source">Hoymiles · March 26 LATAM/APAC event</div>
+        <div class="title">Hoymiles brand consolidation: Brazil + India + Europe simultaneous moves</div>
+        <div class="excerpt">10th anniversary in Brazil + 360 MW India deal + EU HiFlow plug-in launch + Brazil 7.5 kW Fast Track policy alignment (MIS-2500-W Pro). 200,000+ LATAM installs, 98.7% satisfaction rate, &lt;36hr resolution time. Multi-region commercial intensity at a level Enphase historically has not seen from a microinverter competitor.</div>
+        <div class="link-row"><a href="https://canalsolar.com.br/en/Hoymiles-new-microinvestor-line--10-years-in-Brazil./" target="_blank">Canal Solar →</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>💼 LinkedIn / Marketing / Investor — APAC</h2>
+      <div class="card positive">
+        <div class="source">Enphase Newsroom · April 22</div>
+        <div class="title">Evergen integration press release: 65+ VPP programs, 8 countries <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">Strong AU/NZ media pickup including Green Review, ESS News, EveryThingPE, BeyondSPX. Quote from Ryan Wood (Evergen): "Integrating with Enphase unlocks more choice and more value for Australian households."</div>
+        <div class="link-row"><a href="https://www.globenewswire.com/news-release/2026/04/22/3278889/20176/en/Enphase-Energy-Expands-VPP-Capabilities-in-Australia-with-Evergen.html" target="_blank">Globe Newswire →</a></div>
+      </div>
+      <div class="card positive">
+        <div class="source">Simply Wall St analyst commentary</div>
+        <div class="title">Evergen partnership cited as proof of "software-enabled services" strategy <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">"For Enphase, connecting IQ Batteries to Evergen's virtual power plant platform plugs its hardware into a broader software and grid-services layer in Australia and New Zealand… aligns with the narrative that Enphase is building out more software-enabled services around its solar and storage hardware to support long-term earnings resilience."</div>
+        <div class="link-row"><a href="https://sg.finance.yahoo.com/news/enphase-evergen-partnership-puts-iq-180453777.html" target="_blank">Yahoo SG →</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>☀️ APAC Industry News</h2>
+      <div class="card policy">
+        <div class="source">Australian federal government · May 1, 2026</div>
+        <div class="title">Cheaper Home Batteries Program now requires VPP-capable batteries</div>
+        <div class="excerpt">Up to 30% off eligible home battery systems — but only if the battery is VPP-capable. Enphase + Evergen integration just became a compliance requirement, not a nice-to-have. Massive pull-through driver for IQ Battery 5P in AU.</div>
+      </div>
+      <div class="card policy">
+        <div class="source">India residential rooftop policy</div>
+        <div class="title">Indian Rooftop Solar (RTS) growth + microinverter category legitimization</div>
+        <div class="excerpt">Hoymiles framed the 360 MW Kosol deal as "India's first and largest-ever microinverter deal — will significantly support India's Rooftop Solar (RTS) growth." Category-creation moment for Indian microinverter adoption; Enphase needs to participate or cede category leadership.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🔍 White Space &amp; Gap Analysis — APAC <span class="section-label">Strategic</span></h2>
+      <div class="gap-grid">
+        <div class="gap-item">
+          <div class="gap-type">Coverage Gap</div>
+          <div class="gap-title">No Enphase India strategy visible</div>
+          <div class="gap-desc">While Hoymiles announced 360 MW with Kosol Energie, Enphase has zero major Indian rooftop solar news in 2026. India is the highest-growth rooftop solar market globally; competitive vacuum forming.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gap-type">Competitive Gap</div>
+          <div class="gap-title">Tesla owns AU residential storage mindshare</div>
+          <div class="gap-desc">Despite the Evergen/Amber partnerships, AU homeowner default question is still "Powerwall or Powerwall?" Enphase needs to be in the consideration set, not just the comparison.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gap-type">Content Gap</div>
+          <div class="gap-title">"65 VPP programs / 8 countries" stat is buried</div>
+          <div class="gap-desc">This is the strongest, most defensible global stat Enphase has against Tesla and SolarEdge. It only appears in dense press release language. Needs visualization, interactive map, investor-day prominence.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gap-type">Opportunity Gap</div>
+          <div class="gap-title">Cheaper Home Batteries Program VPP-compliance window</div>
+          <div class="gap-desc">May 1 deadline means every AU homeowner thinking about batteries this quarter is reconsidering eligibility. Enphase + Evergen is compliant. Sub-30-day blitz across AU media + installer training is high-ROI.</div>
+        </div>
+        <div class="gap-item">
+          <div class="gap-type">Sentiment Gap</div>
+          <div class="gap-title">No Enphase voice in Indian solar LinkedIn discourse</div>
+          <div class="gap-desc">Hoymiles, APsystems, Waaree, Tata Power Solar all post heavily on Indian solar LinkedIn. Enphase India page is minimal. Direct organic-marketing investment opportunity.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============= LATAM PANEL ============= -->
+  <div class="region-panel" id="panel-latam">
+
+    <div class="action-board">
+      <h2>🎯 Priority Action Board — LATAM</h2>
+      <p class="subtitle">Enphase wound down local Brazil operations Feb 13, 2026. Hoymiles is filling the vacuum. Action plan focuses on retaining installer trust + competitive containment.</p>
+      <div class="action-columns">
+        <div class="action-col urgent">
+          <h3>🔴 Urgent — Today / Tomorrow</h3>
+          <div class="action-card urgent">
+            <div class="act-title">Reassure Brazilian Installers Post-Restructure</div>
+            <div class="act-why">Canal Solar story (Jan 29) framed Brazil pullback negatively. Distributors (Dynamis, Canadian Solar, Solfácil, Fortlev, BelEnergy) continue carrying product but installer confidence is shaken. Public installer support FAQ + WhatsApp/phone access reminders needed.</div>
+            <div class="act-meta"><span class="fmt">FAQ + reassurance video</span><span class="plat">enphase.com.br + WhatsApp</span><span class="own">Brazil Country Manager + International Support</span></div>
+          </div>
+        </div>
+        <div class="action-col week">
+          <h3>🟡 This Week</h3>
+          <div class="action-card week">
+            <div class="act-title">Defend Brazilian Rapid Shutdown Story (NBR 17193)</div>
+            <div class="act-why">Brazil's 2025 NBR 17193 fire-safety standard inherently favors microinverter architecture. Hoymiles is leveraging it as much as Enphase. Refresh competitive content explaining why Enphase microinverter implementation is best-in-class.</div>
+            <div class="act-meta"><span class="fmt">Technical blog + safety video</span><span class="plat">Portuguese-language YouTube + LinkedIn</span><span class="own">Brazil Product Marketing</span></div>
+          </div>
+          <div class="action-card week">
+            <div class="act-title">Mexico IQ Battery 5P Drumbeat</div>
+            <div class="act-why">IQ Battery 5P + IQ8P launched in Mexico; Enphase Training Center in Querétaro active. Mexico is a quiet bright spot in LATAM. Sustain campaign cadence.</div>
+            <div class="act-meta"><span class="fmt">Always-on social + installer training</span><span class="plat">LinkedIn MX + local trade</span><span class="own">LATAM Channel Marketing</span></div>
+          </div>
+        </div>
+        <div class="action-col ongoing">
+          <h3>🟢 Ongoing</h3>
+          <div class="action-card ongoing">
+            <div class="act-title">Monitor Hoymiles Brazil Local Expansion</div>
+            <div class="act-why">Hoymiles opened Brazilian office, signed 15 distributor agreements, launched MIS-2500-W Pro for the 7.5 kW Fast Track policy. Quarterly competitive intelligence refresh needed.</div>
+            <div class="act-meta"><span class="fmt">Internal CI report</span><span class="plat">Internal</span><span class="own">LATAM Strategy</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>⚡ Today's Key Takeaways — LATAM</h2>
+      <ul class="takeaway-list">
+        <li class="urgent"><strong>Enphase ended local Brazilian operations February 13, 2026</strong>. Customer service and field engineering moved to international teams; warranties remain valid; product continues through distributors. Installer confidence has been shaken.</li>
+        <li class="urgent"><strong>Hoymiles opened a new Brazilian office, signed 15 distributor agreements</strong> in late March and launched the MIS-2500-W Pro 4-in-1 — aligning directly with Brazil's 7.5 kW Fast Track rooftop policy. The competitive vacuum is being actively filled.</li>
+        <li><strong>Mexico remains a quietly performing LATAM market</strong> with IQ Battery 5P + IQ8P + Querétaro Training Center in place.</li>
+        <li><strong>Brazil's NBR 17193 fire-safety standard</strong> (March 2025) still inherently favors microinverter architecture — but the Enphase narrative around it has been quiet since the operational restructuring.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🟠 Reddit / Forum Intelligence — LATAM</h2>
+      <div class="no-data">No Brazilian or Mexican Reddit signals on Enphase surfaced today. Most LATAM solar community discussion happens on WhatsApp groups, regional Facebook installer groups, and Portuguese-language YouTube — none of which are indexed in this scan. Recommend dedicated LATAM social listening commission.</div>
+    </div>
+
+    <div class="section">
+      <h2>⚔️ Competitor Analysis — LATAM <span class="section-label">Market Intelligence</span></h2>
+      <table class="comp-table">
+        <thead>
+          <tr><th>Competitor</th><th>LATAM Move</th><th>Threat</th><th>Enphase Counter</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hoymiles</strong></td>
+            <td>New Brazilian office (March 2026); 15 distributor agreements; MIS-W Pro launched aligned with 7.5 kW Fast Track policy; 10 years in Brazil; 200K+ LATAM installs</td>
+            <td class="threat-high">HIGH</td>
+            <td>Most acute competitive threat in LATAM today. Restate Enphase commitment via distributors + warranty assurance.</td>
+          </tr>
+          <tr>
+            <td><strong>APsystems</strong></td>
+            <td>QS2 quad microinverter shipping LATAM via distributors</td>
+            <td class="threat-med">MEDIUM</td>
+            <td>APsystems' Mexico manufacturing creates supply-chain advantage; Enphase counters with brand premium + warranty.</td>
           </tr>
           <tr>
             <td><strong>Tesla Powerwall</strong></td>
-            <td>Limited EU expansion vs US; Powerwall 3 inventory and certified installers in DE/UK constrained</td>
-            <td class="threat-low">🟢 LOW</td>
-            <td>Enphase EU has structural advantage; lean in on local support story</td>
+            <td>Limited LATAM presence; expanding selectively in Mexico</td>
+            <td class="threat-low">LOW (today)</td>
+            <td>Enphase IQ Battery 5P MX launch keeps the position defended.</td>
+          </tr>
+          <tr>
+            <td><strong>Local Chinese inverter brands</strong> (Deye, Growatt, Sungrow)</td>
+            <td>Aggressive Brazilian rooftop string-inverter pricing</td>
+            <td class="threat-med">MEDIUM</td>
+            <td>Microinverter premium positioning + safety story (NBR 17193) is the durable differentiator.</td>
+          </tr>
+          <tr>
+            <td><strong>SolarEdge</strong></td>
+            <td>Limited LATAM presence; international revenue +5% QoQ but mostly EU/AU</td>
+            <td class="threat-low">LOW</td>
+            <td>Not a meaningful LATAM threat near-term.</td>
           </tr>
         </tbody>
       </table>
 
       <div class="card competitor">
-        <div class="source">SMA Solar · May 13, 2026</div>
-        <div class="title"><a href="https://www.pv-tech.org/sma-solar-reports-q1-loss-fine-tunes-2026-guidance/" target="_blank">SMA Solar HBS division +27% YoY; EU rooftop demand surge linked to energy security</a></div>
-        <div class="excerpt">Reuters: SMA HBS Q1 sales €61M vs €48M Q1'25; EMEA ~75% of resi/commercial sales. Demand surged late February amid geopolitical tensions. SMA shares roughly doubled since late February.</div>
+        <div class="source">Canal Solar (Brazil) · January 29, 2026</div>
+        <div class="title">Enphase ends local Brazilian operations February 13, 2026</div>
+        <div class="excerpt">"The company will cease its local operations in Brazil starting February 13, 2026, transferring support for distributors and installers to international teams." CEO Kothandaraman cited cost savings of $5-10M per quarter from H2 2026 onward. Country Manager Luciano Guará: "Technical assistance will be directed to our international number, but we remain committed to customer support and the quality of our products."</div>
+        <div class="link-row"><a href="https://canalsolar.com.br/en/Enphase-changes-strategy-and-ends-local-operation-in-Brazil./" target="_blank">Canal Solar →</a></div>
       </div>
 
       <div class="card competitor">
-        <div class="source">Hoymiles · April 7, 2026</div>
-        <div class="title"><a href="https://www.pv-magazine.com/press-releases/hoymiles-bolsters-european-plug-in-solar-storage-market-with-hiflow-hiflow-pro-microinverters/" target="_blank">Hoymiles launches HiFlow / HiFlow Pro plug-in microinverters in Europe</a></div>
-        <div class="excerpt">HiFlow 800W single-MPPT and HiFlow Pro 300-2000W with up to 4 MPPT channels. Targets balcony, garden, terrace installations — &lt;60-second setup. Hybrid micro-storage solution coming June 2026.</div>
+        <div class="source">Canal Solar / PRNewswire · March 26-30</div>
+        <div class="title">Hoymiles 10-year Brazil anniversary + new office + MIS-W Pro launch</div>
+        <div class="excerpt">Hoymiles signed strategic partnerships with 15 leading Brazilian distributors covering the full Hoymiles MLPE + storage portfolio. MIS-2500-W Pro positions directly against Enphase commercial offering for the 7.5 kW Fast Track segment. Local satisfaction 98.7% / &lt;36hr resolution time presented as competitive advantage over Enphase's offshored support model.</div>
+        <div class="link-row"><a href="https://www.prnewswire.com/news-releases/hoymiles-celebrates-10th-anniversary-in-brazil-with-new-office-opening-and-high-power-microinverter-launch-302725951.html" target="_blank">PRNewswire →</a> &nbsp;|&nbsp; <a href="https://canalsolar.com.br/en/Hoymiles-new-microinvestor-line--10-years-in-Brazil./" target="_blank">Canal Solar →</a></div>
       </div>
     </div>
 
-    <!-- REDDIT EU -->
     <div class="section">
-      <h2><span class="icon">🟠</span> Reddit Intelligence — EU</h2>
-      <p class="section-subtitle">EU-relevant Reddit signals</p>
-      <div class="sentiment-summary">
-        <div class="sent-box pos"><div class="count">2</div><div class="lbl">✅ Positive</div></div>
-        <div class="sent-box neg"><div class="count">1</div><div class="lbl">❌ Negative</div></div>
-        <div class="sent-box neu"><div class="count">1</div><div class="lbl">⚪ Neutral</div></div>
-      </div>
-
-      <div class="card positive">
-        <div class="source">r/Solar (UK / DE) · Heatable 2026 UK review</div>
-        <div class="title"><a href="https://heatable.co.uk/solar/advice/enphase-microinverter-review" target="_blank">"IQ8 now available in the UK, replacing IQ7"</a> <span class="badge positive">Positive</span></div>
-        <div class="excerpt">UK content emphasizes 25-yr warranty, panel-level monitoring, FlexPhase support. Premium price acknowledged but justified for long-term reliability.</div>
-      </div>
-
-      <div class="card positive">
-        <div class="source">EU installer feedback (cited in pv-magazine)</div>
-        <div class="title">Savo Solar Systemen (NL) on FlexPhase: "Adaptability is everything for Dutch homeowners" <span class="badge positive">Positive</span></div>
-        <div class="excerpt">Strong installer endorsement of single + three-phase configurability in NL, where mixed-phase homes are common.</div>
-      </div>
-
-      <div class="card negative">
-        <div class="source">DIY Solar Forum · EU user (Finland)</div>
-        <div class="title"><a href="https://diysolarforum.com/threads/is-a-solar-panel-with-micro-invertor-iq8-worth-compared-to-string-inverter-setup.43338/" target="_blank">"Enphase is a pretty marginal product in Europe... and warranty terms are illegal in EU"</a> <span class="badge negative">Negative</span></div>
-        <div class="excerpt">Finnish user critiques EU warranty patchwork and limited Enphase availability outside DE/NL. Worth addressing with clearer EU warranty page localization.</div>
-      </div>
-
+      <h2>💼 LinkedIn / Marketing — LATAM</h2>
       <div class="card neutral">
-        <div class="source">EU homeowner threads · battery comparison content</div>
-        <div class="title">PowerMatch and FlexPhase getting installer mentions <span class="badge neutral">Neutral</span></div>
-        <div class="excerpt">Mix of educational content; Enphase brand recall present but Tesla Powerwall and Sonnen often the comparison anchor.</div>
-      </div>
-    </div>
-
-    <!-- INDUSTRY EU -->
-    <div class="section">
-      <h2><span class="icon">☀️</span> EU Industry News</h2>
-      <div class="card">
-        <div class="source">May 13, 2026 · Reuters / Global Banking & Finance</div>
-        <div class="title"><a href="https://www.globalbankingandfinance.com/sma-solar-sales-rise-europe-turns-rooftop-panels/" target="_blank">European rooftop solar demand surges since Iran war started</a></div>
-        <div class="excerpt">Solar comprised ~13% of EU electricity generation in 2025; renewables surpassed fossil fuels for the first time. Households limiting exposure to higher fuel costs are driving new rooftop demand.</div>
-      </div>
-
-      <div class="card">
-        <div class="source">October 2025 (Enphase) · still active framework</div>
-        <div class="title"><a href="https://www.globenewswire.com/news-release/2025/10/13/3165506/20176/en/Enphase-Energy-Expands-Virtual-Power-Plant-Support-Across-Europe.html" target="_blank">Enphase expanded VPP support across Europe — one-minute data, solar curtailment</a></div>
-        <div class="excerpt">Active across NL, DE, UK, BE. Solar curtailment via VPP API in use in NL and BE during negative-price events.</div>
-      </div>
-    </div>
-
-    <!-- INVESTOR EU -->
-    <div class="section">
-      <h2><span class="icon">📈</span> Investor / Analyst (EU lens)</h2>
-      <div class="card investor">
-        <div class="source">SMA Solar · Q1 2026 Earnings (May 13)</div>
-        <div class="title"><a href="https://www.pv-tech.org/sma-solar-reports-q1-loss-fine-tunes-2026-guidance/" target="_blank">SMA fine-tunes 2026 guidance to upper third of €1.475-1.675B; €340.9M Q1 revenue</a></div>
-        <div class="excerpt">Net loss €1.6M (vs. €5.5M profit Q1'25); HBS +27% on EU rooftop demand surge. Direct read-through to Enphase EU dynamics.</div>
-      </div>
-      <div class="card investor">
-        <div class="source">Enphase · Q1 2026 supplemental detail</div>
-        <div class="title">International revenue Q1 2026: $49.0M (vs $39.1M Q4'25)</div>
-        <div class="excerpt">International grew sequentially even as U.S. dropped sharply. Europe is the disproportionate driver. Strengthens "global growth engine" narrative for investor outreach.</div>
-      </div>
-    </div>
-
-    <!-- TWITTER/X EU -->
-    <div class="section">
-      <h2><span class="icon">🐦</span> Twitter / X — EU</h2>
-      <div class="no-data">Limited EU-specific X chatter today; opportunity to amplify EU partner posts (LichtBlick, NextEnergy, Savo Solar) on @EnphaseEU handles.</div>
-    </div>
-
-    <!-- LINKEDIN EU -->
-    <div class="section">
-      <h2><span class="icon">💼</span> LinkedIn — EU</h2>
-      <div class="card neutral">
-        <div class="source">Sabbas Daniel (SVP Sales, Enphase) · LinkedIn</div>
-        <div class="title">FlexPhase and VPP partnership posts driving engagement in DE/NL/FR</div>
-        <div class="excerpt">Marco Krapels (Global Energy Markets / CMO) anchoring EU VPP narrative externally.</div>
-      </div>
-    </div>
-
-    <!-- YOUTUBE EU -->
-    <div class="section">
-      <h2><span class="icon">▶️</span> YouTube & Video — EU</h2>
-      <div class="card neutral">
-        <div class="source">Independent UK / DE solar reviewers</div>
-        <div class="title">Heatable.co.uk review (Jan 2026) anchoring UK creator content</div>
-        <div class="excerpt">Continued opportunity to seed video reviews for FlexPhase in DE/AT/CH and PowerMatch results in NL/BE.</div>
-      </div>
-    </div>
-
-    <!-- MARKETING EU -->
-    <div class="section">
-      <h2><span class="icon">📣</span> Marketing Collateral — EU</h2>
-      <div class="card positive">
-        <div class="source">December 2, 2025 · Press release</div>
-        <div class="title"><a href="https://enphaseenergy.gcs-web.com/news-releases/news-release-details/enphase-energy-introduces-powermatch-technology-europe-deliver" target="_blank">PowerMatch™ technology launches in Europe</a></div>
-        <div class="excerpt">OTA update to existing IQ Battery 5P (including FlexPhase) systems; delivers more usable energy + longer battery life.</div>
+        <div class="source">enphase.com.br · ongoing</div>
+        <div class="title">Brazilian Solargraf platform + IQ8P product pages still live</div>
+        <div class="excerpt">Solargraf design and proposal software remains available in Portuguese; IQ8P (480 W AC, up to 670 W DC panels) remains the flagship Brazil offering with 25-yr warranty.</div>
+        <div class="link-row"><a href="https://enphase.com.br/" target="_blank">enphase.com.br →</a></div>
       </div>
       <div class="card positive">
-        <div class="source">June 16, 2025 · Press release</div>
-        <div class="title"><a href="https://newsroom.enphase.com/news-releases/news-release-details/enphase-energy-rolls-out-iq-battery-5p-flexphase-delivering" target="_blank">IQ Battery 5P with FlexPhase rolled out across more EU countries</a></div>
-        <div class="excerpt">Available in ES/PT/FR/SE/DK/BE/NL (June 2025); earlier in PL/LU/DE/AT/CH. 15-yr warranty in core markets.</div>
+        <div class="source">Enphase Mexico</div>
+        <div class="title">IQ Battery 5P + IQ8 deployments ongoing in Mexico <span class="badge positive">POSITIVE</span></div>
+        <div class="excerpt">Querétaro Training Center continues weekly training; 15-yr battery warranty + 20-yr IQ8 microinverter warranty in Mexico. Brand momentum in Nuevo León market remains solid.</div>
       </div>
     </div>
 
-    <!-- FACEBOOK EU -->
     <div class="section">
-      <h2><span class="icon">👥</span> Facebook & Other Social — EU</h2>
-      <div class="no-data">No material activity above threshold today.</div>
+      <h2>☀️ LATAM Industry News</h2>
+      <div class="card policy">
+        <div class="source">Brazilian Association of Photovoltaic Solar Energy (Absolar)</div>
+        <div class="title">Brazil rooftop solar continues to grow despite Enphase pullback</div>
+        <div class="excerpt">Brazil remains one of the world's fastest-growing distributed-generation markets. Hoymiles, APsystems, and local Chinese string inverter brands are all expanding aggressively into the gap created by Enphase's offshored support model.</div>
+      </div>
     </div>
 
-    <!-- GAP EU -->
     <div class="section">
-      <h2><span class="icon">🔍</span> Gap Analysis — EU <span class="section-label strategic">Strategic</span></h2>
+      <h2>🔍 White Space &amp; Gap Analysis — LATAM <span class="section-label">Strategic</span></h2>
       <div class="gap-grid">
-        <div class="gap-item"><div class="gap-type">Competitive</div><div class="gap-title">Balcony / plug-in solar absence</div><div class="gap-desc">Hoymiles and APsystems own the EU balcony category; Enphase has no SKU. Loss of first-time buyer relationship.</div></div>
-        <div class="gap-item"><div class="gap-type">Opportunity</div><div class="gap-title">Energy-security messaging tailwind</div><div class="gap-desc">Iran-war demand surge benefits SMA today — Enphase needs sharper resilience/energy-independence creative across DE/NL/UK.</div></div>
-        <div class="gap-item"><div class="gap-type">Content</div><div class="gap-title">Country-localized warranty / FAQ pages</div><div class="gap-desc">Negative Reddit signal from Finland points to perception gap; localize warranty content for Nordic/Eastern Europe.</div></div>
-        <div class="gap-item"><div class="gap-type">Sentiment</div><div class="gap-title">VPP value-prop underweighted</div><div class="gap-desc">10x growth in EU VPP systems not yet a brand narrative. Homeowner audiences still associate VPP with Tesla/Sonnen.</div></div>
-        <div class="gap-item"><div class="gap-type">Coverage</div><div class="gap-title">Limited engagement on r/solarUK and r/SolarDE</div><div class="gap-desc">EU subreddit conversation density is rising; Enphase EU social handles not actively engaging.</div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- =========================== APAC TAB =========================== -->
-  <div class="tab-content" id="apac">
-
-    <!-- ACTION BOARD -->
-    <div class="action-board">
-      <h2>🎯 Priority Action Board — APAC</h2>
-      <p class="subtitle">Marketing & Comms actions for Australia, New Zealand, India, and broader APAC</p>
-      <div class="action-columns">
-        <div class="action-col urgent">
-          <h3>🔴 Urgent — Today/Tomorrow</h3>
-          <div class="action-card urgent">
-            <div class="act-title">Claim SMA's exit territory in Australia</div>
-            <div class="act-why">SMA officially announced AUS residential exit (May 6). Enphase should hold installer-facing webinars in week of May 18 to capture SMA's premium installer base before Tesla and Sungrow do.</div>
-            <div class="act-meta"><span>Webinar + Email</span><span>AUS / NZ</span><span>Owner: APAC Sales</span></div>
-          </div>
-          <div class="action-card urgent">
-            <div class="act-title">Push Cheaper Home Batteries Program rebate story</div>
-            <div class="act-why">AUS federal battery rebate up to 30% off; combined with NSW/SA state incentives + Evergen/Amber VPP credits. Enphase has the most complete eligibility-stack story in market.</div>
-            <div class="act-meta"><span>Paid social + email</span><span>Australia</span><span>Owner: APAC PMM</span></div>
-          </div>
+        <div class="gap-item">
+          <div class="gap-type">Coverage Gap</div>
+          <div class="gap-title">Portuguese-language solar press goes mostly to competitors</div>
+          <div class="gap-desc">Canal Solar coverage of Hoymiles 10-year anniversary + MIS-W Pro launch was extensive. Enphase coverage in Q2 2026 has been minimal except for the operational pullback story. Need consistent Portuguese-language content drumbeat to retain mindshare.</div>
         </div>
-
-        <div class="action-col week">
-          <h3>🟡 This Week</h3>
-          <div class="action-card week">
-            <div class="act-title">Evergen + Amber VPP installer enablement</div>
-            <div class="act-why">April 22 Evergen integration; Amber Electric also recent. Need installer training assets and homeowner-facing comparison vs. Tesla VPP.</div>
-            <div class="act-meta"><span>Training + Web</span><span>AUS / NZ</span><span>Owner: APAC PMM</span></div>
-          </div>
-          <div class="action-card week">
-            <div class="act-title">IQ Energy Management AI launch campaign</div>
-            <div class="act-why">March 26 launch in AUS/NZ; supports variable tariffs, EV chargers, water heaters. Develop homeowner case studies showing real savings — first results should be available now.</div>
-            <div class="act-meta"><span>Case study + Video</span><span>AUS / NZ</span><span>Owner: APAC Comms</span></div>
-          </div>
-          <div class="action-card week">
-            <div class="act-title">Hoymiles India response</div>
-            <div class="act-why">360 MW India deal Jan 28 shows Hoymiles building scale in a market Enphase doesn't serve at scale. Develop a position on India RTS or acknowledge ROW prioritization.</div>
-            <div class="act-meta"><span>Strategic memo</span><span>Internal</span><span>Owner: APAC GM</span></div>
-          </div>
+        <div class="gap-item">
+          <div class="gap-type">Sentiment Gap</div>
+          <div class="gap-title">"Enphase is leaving Brazil" narrative needs hard counter</div>
+          <div class="gap-desc">The Canal Solar article ran across LATAM solar trade press in January-February. Public-facing counter-narrative ("Enphase continues to invest in Brazil through partners + warranty") has been quieter than the original story. Risk of installer churn to Hoymiles.</div>
         </div>
-
-        <div class="action-col ongoing">
-          <h3>🟢 Ongoing</h3>
-          <div class="action-card ongoing">
-            <div class="act-title">FlexPhase three-phase backup advocacy</div>
-            <div class="act-why">Australian three-phase homes are common; FlexPhase fills a real gap. Continue installer-led content explaining single + three-phase configurability.</div>
-            <div class="act-meta"><span>Installer content</span><span>AUS / NZ</span><span>Owner: APAC PMM</span></div>
-          </div>
+        <div class="gap-item">
+          <div class="gap-type">Content Gap</div>
+          <div class="gap-title">NBR 17193 safety story going untold</div>
+          <div class="gap-desc">Brazil's 2025 NBR 17193 fire-safety standard inherently favors microinverter architecture. Enphase issued a March 2025 press release applauding the standard but hasn't sustained the safety-narrative drumbeat into 2026 to differentiate vs string inverter and balcony plug-in competitors.</div>
         </div>
-      </div>
-    </div>
-
-    <!-- KEY TAKEAWAYS APAC -->
-    <div class="section">
-      <h2><span class="icon">⚡</span> Today's Key Takeaways — APAC</h2>
-      <ul class="takeaway-list">
-        <li class="urgent"><strong>SMA Solar officially exits AUS residential market</strong> (May 6) — premium installer vacuum, immediate opportunity.</li>
-        <li>Enphase + Evergen VPP integration (April 22) live across 65 VPP programs in 8 countries; eligible Aus customers can stack federal + state + retailer + VPP incentives.</li>
-        <li><strong>IQ Energy Management with AI</strong> launched in AUS/NZ March 26 — manages EV chargers, water heaters, variable tariffs from Enphase App.</li>
-        <li>Hoymiles signed India's largest-ever microinverter deal (360 MW with Kosol Energie) in January — APAC competitive dynamics shifting.</li>
-        <li>Local concerns (PSC Energy) on IQ Battery 5P FlexPhase capacity (5 kWh) and wall presence — community signal worth direct engagement.</li>
-      </ul>
-    </div>
-
-    <!-- COMPETITOR APAC -->
-    <div class="section">
-      <h2><span class="icon">⚔️</span> Competitor Analysis — APAC</h2>
-      <table class="comp-table">
-        <thead>
-          <tr><th>Competitor</th><th>APAC Activity</th><th>Threat</th><th>Implication for Enphase APAC</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Tesla Powerwall</strong></td><td>Strong AUS adoption; Powerwall 3 popular; active VPP programs</td><td class="threat-high">🔴 HIGH</td><td>Direct head-to-head; rebate-stack story is Enphase's differentiator</td></tr>
-          <tr><td><strong>Sungrow</strong></td><td>Aggressive AUS share gains; very competitive pricing on hybrid inverters</td><td class="threat-high">🔴 HIGH</td><td>Need to lean into 15-yr warranty + ecosystem story vs price advantage</td></tr>
-          <tr><td><strong>Sigenergy</strong></td><td>Growing AUS share with bidirectional EV/V2H capability</td><td class="threat-med">🟡 MEDIUM</td><td>Watch this space — Enphase needs V2H roadmap clarity</td></tr>
-          <tr><td><strong>SMA Solar</strong></td><td>Exited AUS residential (May 6); refocus on utility/grid-forming</td><td class="threat-low">🟢 LOW</td><td>Installer pickup opportunity</td></tr>
-          <tr><td><strong>Hoymiles</strong></td><td>360 MW India deal (Jan); Mexico manufacturing serves LATAM/APAC supply</td><td class="threat-med">🟡 MEDIUM</td><td>Building scale in markets Enphase doesn't address</td></tr>
-        </tbody>
-      </table>
-
-      <div class="card competitor">
-        <div class="source">SMA Solar · May 6, 2026</div>
-        <div class="title"><a href="https://www.pv-magazine-australia.com/2026/05/06/sma-exits-australian-small-scale-market-in-favour-of-utility-sector/" target="_blank">SMA exits Australian residential market</a></div>
-        <div class="excerpt">CEO Jürgen Reinert: "Massive oversupply, aggressive pricing and state-subsidised manufacturing from China have fundamentally altered the competitive dynamics." Refocusing on grid-forming utility-scale.</div>
-      </div>
-
-      <div class="card competitor">
-        <div class="source">Hoymiles · India</div>
-        <div class="title"><a href="https://www.prnewswire.com/apac/news-releases/hoymiles-secures-indias-largest-ever-microinverter-deal-with-kosol-energie-totaling-360-mw-302672014.html" target="_blank">Hoymiles signs 360 MW microinverter deal with Kosol Energie</a></div>
-        <div class="excerpt">India RTS push; Hoymiles' largest single microinverter contract globally. Indicator of how fast Chinese microinverter players are scaling outside their home market.</div>
-      </div>
-    </div>
-
-    <!-- REDDIT APAC -->
-    <div class="section">
-      <h2><span class="icon">🟠</span> Reddit Intelligence — APAC</h2>
-      <div class="sentiment-summary">
-        <div class="sent-box pos"><div class="count">1</div><div class="lbl">✅ Positive</div></div>
-        <div class="sent-box neg"><div class="count">2</div><div class="lbl">❌ Negative</div></div>
-        <div class="sent-box neu"><div class="count">1</div><div class="lbl">⚪ Neutral</div></div>
-      </div>
-
-      <div class="card positive">
-        <div class="source">r/AusFinance / r/AustralianPolitics + Gridly review</div>
-        <div class="title"><a href="https://www.gridly.com.au/home-batteries/enphase-iq-5p" target="_blank">"15-year warranty - industry best in Australia"</a> <span class="badge positive">Positive</span></div>
-        <div class="excerpt">Gridly anchors AUS coverage on the warranty advantage and 100% depth-of-discharge. Modular expansion praised for Enphase IQ8 microinverter owners.</div>
-      </div>
-
-      <div class="card negative">
-        <div class="source">PSC Energy (AUS) · cross-posted Reddit / installer community</div>
-        <div class="title"><a href="https://www.pscenergy.com.au/blog/problems-with-the-enphase-iq-battery-5p-flexphase/" target="_blank">"Enphase arrived late to bigger battery demand" — capacity criticism</a> <span class="badge negative">Negative</span></div>
-        <div class="excerpt">5 kWh capacity criticized for AUS market context; need to stack multiple units; design-focused buyers find wall presence unappealing.</div>
-      </div>
-
-      <div class="card negative">
-        <div class="source">r/Solar AUS · price comparison threads</div>
-        <div class="title">Sigenergy and Sungrow positioned as better $/kWh in AUS <span class="badge negative">Negative</span></div>
-        <div class="excerpt">Recurring theme: Enphase IQ Battery is the most expensive per kWh; better suited to Enphase-microinverter retrofits.</div>
-      </div>
-
-      <div class="card neutral">
-        <div class="source">Yahoo Australia Finance · April 22</div>
-        <div class="title"><a href="https://au.finance.yahoo.com/news/enphase-energy-launches-iq-energy-120000114.html" target="_blank">IQ Energy Management AI launch coverage in AUS</a> <span class="badge neutral">Neutral</span></div>
-        <div class="excerpt">Coverage relatively quiet outside the trade press; opportunity to push consumer-facing creative.</div>
-      </div>
-    </div>
-
-    <!-- INDUSTRY APAC -->
-    <div class="section">
-      <h2><span class="icon">☀️</span> APAC Industry News</h2>
-      <div class="card">
-        <div class="source">Green Review (AUS) · April 24</div>
-        <div class="title"><a href="https://greenreview.com.au/business_insight/enphase-energy-and-evergen-form-partnership-to-accelerate-virtual-power-plants/" target="_blank">Enphase + Evergen partnership accelerates VPPs in Australia</a></div>
-        <div class="excerpt">Battery owners get charge-from-grid-low / export-at-grid-high economics + VPP credits. Combinable with federal Cheaper Home Batteries Program rebate.</div>
-      </div>
-      <div class="card">
-        <div class="source">pv magazine Australia · March 27</div>
-        <div class="title"><a href="https://www.pv-magazine-australia.com/2026/03/27/enphase-launches-ai-home-energy-management-system/" target="_blank">Enphase launches AI home energy management in AUS/NZ</a></div>
-        <div class="excerpt">Self-consumption mode + variable tariff optimization. Forecasts solar production, weather, and energy needs. Controls EV chargers + water heaters.</div>
-      </div>
-    </div>
-
-    <!-- INVESTOR APAC -->
-    <div class="section">
-      <h2><span class="icon">📈</span> Investor / Analyst — APAC</h2>
-      <div class="card investor">
-        <div class="source">Simply Wall St (SG/AUS edition) · April 22</div>
-        <div class="title"><a href="https://sg.finance.yahoo.com/news/enphase-evergen-partnership-puts-iq-180453777.html" target="_blank">Evergen tie-up frames Enphase as building software-enabled services beyond hardware</a></div>
-        <div class="excerpt">Analyst note flags VPP execution risk and policy/tariff dependence in AUS/NZ as factors to monitor.</div>
-      </div>
-    </div>
-
-    <!-- TWITTER APAC -->
-    <div class="section">
-      <h2><span class="icon">🐦</span> Twitter / X — APAC</h2>
-      <div class="no-data">Limited material X chatter; opportunity to engage AUS installer community on IQ Energy Management and rebate stacks.</div>
-    </div>
-
-    <!-- LINKEDIN APAC -->
-    <div class="section">
-      <h2><span class="icon">💼</span> LinkedIn — APAC</h2>
-      <div class="card positive">
-        <div class="source">Ken Fong (SVP, SVP & GM Americas/APAC) · LinkedIn</div>
-        <div class="title">Quoted in AUS/NZ IQ Energy Management launch posts</div>
-        <div class="excerpt">"Australia and New Zealand are global leaders in residential electrification" — strong installer engagement on this messaging.</div>
-      </div>
-    </div>
-
-    <!-- YOUTUBE APAC -->
-    <div class="section">
-      <h2><span class="icon">▶️</span> YouTube — APAC</h2>
-      <div class="no-data">No material new YouTube content meeting threshold today.</div>
-    </div>
-
-    <!-- MARKETING APAC -->
-    <div class="section">
-      <h2><span class="icon">📣</span> Marketing Collateral — APAC</h2>
-      <div class="card positive">
-        <div class="source">April 22, 2026 · Press release</div>
-        <div class="title"><a href="https://www.globenewswire.com/news-release/2026/04/22/3278889/20176/en/Enphase-Energy-Expands-VPP-Capabilities-in-Australia-with-Evergen.html" target="_blank">Enphase + Evergen VPP integration in AUS/NZ</a></div>
-        <div class="excerpt">Adds to existing Amber Electric integration. Eligible customers can layer state + retailer + federal rebate programs.</div>
-      </div>
-      <div class="card positive">
-        <div class="source">March 26, 2026 · Press release</div>
-        <div class="title"><a href="https://www.globenewswire.com/news-release/2026/03/26/3262929/0/en/Enphase-Energy-Launches-IQ-Energy-Management-in-Australia-and-New-Zealand.html" target="_blank">IQ Energy Management AI platform launches in AUS/NZ</a></div>
-        <div class="excerpt">Combines AI software with IQ Energy Router suite. Heating/cooling/EV optimization on dynamic tariffs.</div>
-      </div>
-    </div>
-
-    <!-- FB APAC -->
-    <div class="section">
-      <h2><span class="icon">👥</span> Facebook & Other Social — APAC</h2>
-      <div class="no-data">No material activity above threshold today.</div>
-    </div>
-
-    <!-- GAP APAC -->
-    <div class="section">
-      <h2><span class="icon">🔍</span> Gap Analysis — APAC <span class="section-label strategic">Strategic</span></h2>
-      <div class="gap-grid">
-        <div class="gap-item"><div class="gap-type">Opportunity</div><div class="gap-title">SMA installer base acquisition</div><div class="gap-desc">SMA's exit (May 6) leaves a premium-installer audience seeking an alternative — narrow window of opportunity, 2-4 weeks.</div></div>
-        <div class="gap-item"><div class="gap-type">Sentiment</div><div class="gap-title">Battery capacity vs Tesla / Sigenergy</div><div class="gap-desc">Persistent AUS perception that 5 kWh is too small; need stronger "modular scaling = future-proof" reframe.</div></div>
-        <div class="gap-item"><div class="gap-type">Competitive</div><div class="gap-title">India RTS absence</div><div class="gap-desc">Hoymiles signing 360 MW deal Jan 28 highlights Enphase's gap in the world's fastest-growing solar market. Strategic decision required.</div></div>
-        <div class="gap-item"><div class="gap-type">Coverage</div><div class="gap-title">VPP value perception below Tesla</div><div class="gap-desc">Despite 65-program global footprint and Evergen + Amber AUS integration, public perception still anchors VPP = Tesla.</div></div>
-        <div class="gap-item"><div class="gap-type">Content</div><div class="gap-title">IQ Energy Management consumer creative</div><div class="gap-desc">AI energy management launched March 26 but consumer-facing case studies are missing; trade press only.</div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- =========================== LATAM TAB =========================== -->
-  <div class="tab-content" id="latam">
-
-    <!-- ACTION BOARD -->
-    <div class="action-board">
-      <h2>🎯 Priority Action Board — LATAM</h2>
-      <p class="subtitle">Targeted comms for Mexico, Brazil, Caribbean, Colombia, Panama, Costa Rica</p>
-      <div class="action-columns">
-        <div class="action-col urgent">
-          <h3>🔴 Urgent — Today/Tomorrow</h3>
-          <div class="action-card urgent">
-            <div class="act-title">Reassure Brazil installer base</div>
-            <div class="act-why">Enphase ended local Brazil operations Feb 13, 2026, moving to international support. Distributors (Dynamis, Solfácil, etc.) and installers need active reassurance — Hoymiles just signed 15 strategic distributor agreements in Brazil.</div>
-            <div class="act-meta"><span>Email + Webinar</span><span>BR partners</span><span>Owner: LATAM Sales</span></div>
-          </div>
+        <div class="gap-item">
+          <div class="gap-type">Competitive Gap</div>
+          <div class="gap-title">Hoymiles is operationally outflanking Enphase in LATAM</div>
+          <div class="gap-desc">New office + 15 distributor agreements + 7.5 kW Fast Track-optimized product + local LATAM manufacturing (Mexico) + 98.7% local satisfaction. Enphase moved the opposite direction with offshored support.</div>
         </div>
-        <div class="action-col week">
-          <h3>🟡 This Week</h3>
-          <div class="action-card week">
-            <div class="act-title">Mexico IQ8 deployment momentum</div>
-            <div class="act-why">Mexico has emerged as Enphase's core LATAM market. Querétaro training center continues; weekly trainings. Push installer enablement assets harder.</div>
-            <div class="act-meta"><span>Training content</span><span>Mexico</span><span>Owner: LATAM PMM</span></div>
-          </div>
-          <div class="action-card week">
-            <div class="act-title">Colombia / Panama / Costa Rica scale-up</div>
-            <div class="act-why">IQ8P launched in those markets in January 2025; 20-year warranty. Light first-year coverage; opportunity to seed local installer success stories.</div>
-            <div class="act-meta"><span>Case study</span><span>CO/PA/CR</span><span>Owner: LATAM PMM</span></div>
-          </div>
+        <div class="gap-item">
+          <div class="gap-type">Opportunity Gap</div>
+          <div class="gap-title">Mexico is a defensible regional anchor — under-marketed</div>
+          <div class="gap-desc">Mexico has IQ Battery 5P + IQ8P + Querétaro Training Center + Solargraf in Spanish + Enphase Installer Network — a fully built-out market. Lean into MX as the LATAM showcase market while LATAM strategy is reset.</div>
         </div>
-        <div class="action-col ongoing">
-          <h3>🟢 Ongoing</h3>
-          <div class="action-card ongoing">
-            <div class="act-title">Rapid Shutdown / fire safety leadership</div>
-            <div class="act-why">Brazil's NBR 17193 (March 2025) effectively favors microinverter safety. Continue safety-leadership content for distributors and AHJs across LATAM.</div>
-            <div class="act-meta"><span>Education + AHJ</span><span>BR / regional</span><span>Owner: LATAM Comms</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- KEY TAKEAWAYS LATAM -->
-    <div class="section">
-      <h2><span class="icon">⚡</span> Today's Key Takeaways — LATAM</h2>
-      <ul class="takeaway-list">
-        <li class="urgent"><strong>Enphase ended local Brazil operations February 13, 2026</strong> — distributor and installer reassurance is overdue; warranties remain valid, support via international channels.</li>
-        <li>Hoymiles celebrated 10 years in Brazil (March), opened new São Paulo office, signed 15 strategic distributor agreements — Enphase's competitive position in Brazil is at risk.</li>
-        <li>Mexico (Querétaro training center) and emerging markets (Colombia, Panama, Costa Rica) remain active growth markets with IQ8P deployments.</li>
-        <li>Caribbean IQ8 launch progressing; Puerto Rico market continues to mature.</li>
-      </ul>
-    </div>
-
-    <!-- COMPETITOR LATAM -->
-    <div class="section">
-      <h2><span class="icon">⚔️</span> Competitor Analysis — LATAM</h2>
-      <table class="comp-table">
-        <thead><tr><th>Competitor</th><th>LATAM Activity</th><th>Threat</th><th>Implication</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Hoymiles</strong></td><td>10-yr Brazil anniversary; new São Paulo office; 15 distributor agreements; Mexican manufacturing in Mexico since 2024; MIS-W Pro launch</td><td class="threat-high">🔴 HIGH</td><td>Filling vacuum left by Enphase Brazil retreat; supply-chain advantage</td></tr>
-          <tr><td><strong>APsystems</strong></td><td>Established LATAM presence; long-standing residential play in BR</td><td class="threat-med">🟡 MEDIUM</td><td>Local competition, especially Brazil</td></tr>
-          <tr><td><strong>Tesla Powerwall</strong></td><td>Limited LATAM distribution; growing in Mexico</td><td class="threat-med">🟡 MEDIUM</td><td>Premium battery competition in Mexican luxury residential</td></tr>
-          <tr><td><strong>SolarEdge</strong></td><td>Limited LATAM activity in 2026; focus elsewhere</td><td class="threat-low">🟢 LOW</td><td>Not a near-term LATAM competitor</td></tr>
-          <tr><td><strong>SMA Solar</strong></td><td>Minimal LATAM resi presence</td><td class="threat-low">🟢 LOW</td><td>Not a near-term competitor</td></tr>
-        </tbody>
-      </table>
-
-      <div class="card competitor">
-        <div class="source">Hoymiles · March 26, 2026</div>
-        <div class="title"><a href="http://www2.prnewswire.com/news-releases/hoymiles-celebrates-10th-anniversary-in-brazil-with-new-office-opening-and-high-power-microinverter-launch-302725951.html" target="_blank">Hoymiles 10th Brazil anniversary + 15 distributor partnerships + 200K+ LATAM installations</a></div>
-        <div class="excerpt">MIS-W Pro 4-in-1 series for Brazilian Fast Track policy; 98.0% efficiency. Mexican manufacturing facility provides supply chain resilience across LATAM. Direct competitive risk where Enphase has scaled back.</div>
-      </div>
-
-      <div class="card competitor">
-        <div class="source">Hoymiles · April 30, 2026</div>
-        <div class="title"><a href="https://canalsolar.com.br/en/Hoymiles-Portfolio-Intersolar-Northeast-2026/" target="_blank">Hoymiles presents full portfolio at Intersolar Northeast Brazil 2026</a></div>
-        <div class="excerpt">Continued aggressive Brazilian market push at the same moment Enphase is consolidating support.</div>
-      </div>
-    </div>
-
-    <!-- REDDIT LATAM -->
-    <div class="section">
-      <h2><span class="icon">🟠</span> Reddit Intelligence — LATAM</h2>
-      <div class="sentiment-summary">
-        <div class="sent-box pos"><div class="count">0</div><div class="lbl">✅ Positive</div></div>
-        <div class="sent-box neg"><div class="count">1</div><div class="lbl">❌ Negative</div></div>
-        <div class="sent-box neu"><div class="count">1</div><div class="lbl">⚪ Neutral</div></div>
-      </div>
-
-      <div class="card negative">
-        <div class="source">Canal Solar (BR) · industry reaction</div>
-        <div class="title"><a href="https://canalsolar.com.br/en/Enphase-changes-strategy-and-ends-local-operation-in-Brazil./" target="_blank">"Enphase changes strategy and ends local operation in Brazil"</a> <span class="badge negative">Negative</span></div>
-        <div class="excerpt">Article frames the departure as a retreat from a growing market. Distributors quoted reassuringly but installer concern is implicit. Aggregated to Reddit/LinkedIn LATAM communities.</div>
-      </div>
-
-      <div class="card neutral">
-        <div class="source">Mexican solar installer forums</div>
-        <div class="title">Querétaro training center mentioned positively in installer discussion threads <span class="badge neutral">Neutral</span></div>
-        <div class="excerpt">Trainings continue weekly; installer base growing. Mexico remains an underweighted opportunity story.</div>
-      </div>
-    </div>
-
-    <!-- INDUSTRY LATAM -->
-    <div class="section">
-      <h2><span class="icon">☀️</span> LATAM Industry News</h2>
-      <div class="card">
-        <div class="source">January 29, 2026 · Canal Solar</div>
-        <div class="title"><a href="https://canalsolar.com.br/en/Enphase-changes-strategy-and-ends-local-operation-in-Brazil./" target="_blank">Enphase ends local Brazil operations Feb 13; warranties remain valid</a></div>
-        <div class="excerpt">Service moves to international teams via WhatsApp / international numbers. Distributors Dynamis, Solfácil, Fortlev, BelEnergy continue to carry product. Estimated $5-10M quarterly savings from H2 2026.</div>
-      </div>
-    </div>
-
-    <!-- INVESTOR LATAM -->
-    <div class="section">
-      <h2><span class="icon">📈</span> Investor / Analyst — LATAM</h2>
-      <div class="card investor">
-        <div class="source">CEO commentary · Q1 2026</div>
-        <div class="title">Brazil retrenchment is part of cost optimization driving $5-10M/qtr savings</div>
-        <div class="excerpt">Restructuring charges $4.6M one-time; tied to broader AI/automation efficiency narrative. Investor interpretation: positive cost discipline; some loss of growth optionality in BR.</div>
-      </div>
-    </div>
-
-    <!-- TWITTER LATAM -->
-    <div class="section">
-      <h2><span class="icon">🐦</span> Twitter / X — LATAM</h2>
-      <div class="no-data">No material activity meeting threshold today.</div>
-    </div>
-
-    <!-- LINKEDIN LATAM -->
-    <div class="section">
-      <h2><span class="icon">💼</span> LinkedIn — LATAM</h2>
-      <div class="card neutral">
-        <div class="source">Luciano Guará (Brazil Country Manager) · transition</div>
-        <div class="title">Brazil leadership communicating transition message externally</div>
-        <div class="excerpt">"Technical assistance will be directed to our international number, but we remain committed to customer support and the quality of our products."</div>
-      </div>
-    </div>
-
-    <!-- YOUTUBE LATAM -->
-    <div class="section">
-      <h2><span class="icon">▶️</span> YouTube — LATAM</h2>
-      <div class="no-data">No material new content meeting threshold today.</div>
-    </div>
-
-    <!-- MARKETING LATAM -->
-    <div class="section">
-      <h2><span class="icon">📣</span> Marketing Collateral — LATAM</h2>
-      <div class="card positive">
-        <div class="source">January 9, 2025 · Press release (still active framework)</div>
-        <div class="title"><a href="https://newsroom.enphase.com/news-releases/news-release-details/enphase-energy-expands-latin-america-launch-iq8-microinverters" target="_blank">IQ8P launched in Colombia, Panama, Costa Rica</a></div>
-        <div class="excerpt">20-year warranty; 480W peak output. Active LATAM growth markets beyond Brazil and Mexico.</div>
-      </div>
-      <div class="card positive">
-        <div class="source">March 18, 2025 · Press release (regulatory milestone)</div>
-        <div class="title"><a href="https://investor.enphase.com/news-releases/news-release-details/enphase-energy-applauds-new-rapid-shutdown-standard-solar" target="_blank">Brazil NBR 17193 fire safety standard — favors microinverters</a></div>
-        <div class="excerpt">Brazilian regulation now mandates rapid shutdown — structurally favors panel-level inverter architecture. Continued education runway.</div>
-      </div>
-    </div>
-
-    <!-- FACEBOOK LATAM -->
-    <div class="section">
-      <h2><span class="icon">👥</span> Facebook & Other Social — LATAM</h2>
-      <div class="no-data">No material activity above threshold today.</div>
-    </div>
-
-    <!-- GAP LATAM -->
-    <div class="section">
-      <h2><span class="icon">🔍</span> Gap Analysis — LATAM <span class="section-label strategic">Strategic</span></h2>
-      <div class="gap-grid">
-        <div class="gap-item"><div class="gap-type">Sentiment</div><div class="gap-title">Brazil exit perception risk</div><div class="gap-desc">Without active reassurance comms, distributors may interpret retreat as deprioritization. Hoymiles is actively recruiting that audience.</div></div>
-        <div class="gap-item"><div class="gap-type">Competitive</div><div class="gap-title">Hoymiles' local manufacturing advantage</div><div class="gap-desc">Mexican facility (2024 onward) gives Hoymiles supply-chain resilience and trade-fluctuation hedge that Enphase needs to address.</div></div>
-        <div class="gap-item"><div class="gap-type">Content</div><div class="gap-title">Mexico growth story untold</div><div class="gap-desc">Querétaro training center, regional installer momentum and IQ8P shipments not surfaced as a global success narrative.</div></div>
-        <div class="gap-item"><div class="gap-type">Coverage</div><div class="gap-title">Colombia / Panama / Costa Rica light first-year coverage</div><div class="gap-desc">Year+ post-launch in those markets; light installer or homeowner storytelling.</div></div>
-        <div class="gap-item"><div class="gap-type">Opportunity</div><div class="gap-title">NBR 17193 safety leadership</div><div class="gap-desc">Brazil's new safety standard is a long-term tailwind for microinverters; under-leveraged in education and AHJ campaigns.</div></div>
       </div>
     </div>
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
-    <strong>⚡ Enphase Daily Intelligence Brief</strong> &nbsp;·&nbsp; Auto-generated by AI &nbsp;·&nbsp; Thursday, May 14, 2026<br>
-    Sources: Reddit · X/Twitter · LinkedIn · YouTube · Stocktwits · Globe Newswire · pv-magazine · PV Tech · SEIA · Wood Mackenzie · Yahoo Finance · Seeking Alpha · Canal Solar · Competitor Investor Pages<br>
-    Built with Enphase Design System principles · Regional tabs: AMER / EU / APAC / LATAM
+    <strong>⚡ Enphase Daily Intelligence Brief</strong> &nbsp;·&nbsp; Auto-generated &nbsp;·&nbsp; Friday, May 15, 2026<br>
+    Sources: Reddit · X/Twitter · LinkedIn · YouTube · Globe Newswire · Yahoo Finance · PV Magazine · PV Tech · Mercom · Canal Solar · SEIA · Wood Mackenzie · EnergySage · DIY Solar Forum · Competitor monitoring across SolarEdge, Tesla Energy, Hoymiles, APsystems, SMA Solar
   </div>
-
 </div>
 
 <script>
-  // Tab switching
-  document.querySelectorAll('.tab').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const tabName = btn.dataset.tab;
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-      btn.classList.add('active');
-      const content = document.getElementById(tabName);
-      if (content) content.classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Region tab switching
+  document.querySelectorAll('.region-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.region-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.region-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('panel-' + tab.dataset.region).classList.add('active');
+      window.scrollTo({ top: document.querySelector('.region-tabs').offsetTop - 16, behavior: 'smooth' });
     });
   });
 </script>
-
 </body>
 </html>
